@@ -13,11 +13,14 @@ public class TrenMovimiento : MonoBehaviour
 
     public float velocidadVertical = 5f; // Velocidad del Lerp vertical
 
+
     private Vector3 targetPosition;
 
     void Start()
     {
         targetPosition = transform.position; // iniciar posición objetivo
+                                             
+    
     }
 
     void Update()
@@ -37,7 +40,7 @@ public class TrenMovimiento : MonoBehaviour
     void IrPorArriba()
     {
         targetPosition = new Vector3(transform.position.x, transform.position.y + alturaCambio, transform.position.z);
-        animator.Play("ArribaTren", -1, 0f);
+       
     }
 
     void IrPorAbajo()
@@ -56,7 +59,9 @@ public class TrenMovimiento : MonoBehaviour
         if (collision.CompareTag("ResetPoint"))
         {
             Debug.Log("RESET");
+            gameManager.canChangeTrack = true;
             gameManager.decision = 0;
+         
             //resetPoint.transform.position += new Vector3(distanciaEntrePuntos, 0, 0);
             IrPorElMedio();
         }
@@ -65,6 +70,8 @@ public class TrenMovimiento : MonoBehaviour
         {
             Debug.Log("ACCION");
             //actionPoint.transform.position += new Vector3(distanciaEntrePuntos, 0, 0);
+
+            gameManager.canChangeTrack = false;
 
             if (gameManager.decision == 1)
                 IrPorArriba();

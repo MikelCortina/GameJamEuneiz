@@ -9,11 +9,6 @@ public class RunAudio : MonoBehaviour
     void Start()
     {
 
-        // Crear o conseguir AudioSource primero
-        audioSource = gameObject.GetComponent<AudioSource>();
-        if (audioSource == null)
-            audioSource = gameObject.AddComponent<AudioSource>();
-
         audioSource.clip = runSound;
         audioSource.loop = true;
         audioSource.playOnAwake = false;
