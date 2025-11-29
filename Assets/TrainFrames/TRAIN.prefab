@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 334624605028115024}
   - component: {fileID: 3951536622127943179}
+  - component: {fileID: 6429235890523395576}
   - component: {fileID: 323862502288570631}
   - component: {fileID: 6900444070412780279}
   - component: {fileID: 1860003852026887962}
-  - component: {fileID: 6127087404015847909}
   m_Layer: 0
   m_Name: TRAIN
   m_TagString: Untagged
@@ -29,13 +29,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7871737416169224655}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.011344323, w: 0.9999357}
   m_LocalPosition: {x: -10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.3}
 --- !u!212 &3951536622127943179
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -83,17 +83,38 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: b6b619219584a434d82734c580fbd99e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4ac0a52d951478b4594394b75f640759, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 6.4, y: 3.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6429235890523395576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7871737416169224655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c6e71fb6d1e0144ebcc5337613b8171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CambioSpritePorTag
+  gameManager: {fileID: 0}
+  spriteParaGiroArriba1: {fileID: 21300000, guid: d7455a16df2856d4ab070e60eddd7696, type: 3}
+  spriteParaGiroArriba2: {fileID: 21300000, guid: a6bb31059072f9a4eae858ebfe1fcc0a, type: 3}
+  spriteParaGiroArriba3: {fileID: 21300000, guid: 8ecd1d5de20b56a47a3928abdeb6240b, type: 3}
+  spriteParaGiroArriba4: {fileID: 21300000, guid: 88f531b6b2b6d63459abfc566e480764, type: 3}
+  spriteParaIdle: {fileID: 21300000, guid: 4ac0a52d951478b4594394b75f640759, type: 3}
+  spriteParaGiroAbajo1: {fileID: 0}
+  spriteParaGiroAbajo2: {fileID: 0}
+  spriteParaGiroAbajo3: {fileID: 0}
 --- !u!114 &323862502288570631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,8 +133,8 @@ MonoBehaviour:
   actionPoint: {fileID: 5784169190170006877, guid: ded393eef766471488d5d9a4e2d6103c, type: 3}
   distanciaEntrePuntos: 40
   alturaCambio: 0.5
-  animator: {fileID: 6127087404015847909}
   velocidadVertical: 5
+  smoothTimeVertical: 0.25
 --- !u!50 &6900444070412780279
 Rigidbody2D:
   serializedVersion: 5
@@ -175,37 +196,15 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.14805493}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 6.4, y: 3.6}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 6.4, y: 3.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.931866}
   m_EdgeRadius: 0
---- !u!95 &6127087404015847909
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7871737416169224655}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 392c1883450f7eb4fa749236da2e32d5, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

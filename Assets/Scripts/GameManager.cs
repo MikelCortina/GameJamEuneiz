@@ -3,11 +3,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int decision;
-    public AudioClip palancaSound;
-    public AudioClip palancaReturnSound;
+    public AudioClip palancaArribaSound;
+    public AudioClip palancaAbajoSound;
+    public AudioClip palancaArribaMedioSound;
+    public AudioClip palancaAbajoMedioSound;
     public AudioSource audioSource;
     public bool canChangeTrack = true;
-    int lastDecision = -1; // valor inicial que nunca será 0
+    public int lastDecision = -1; // valor inicial que nunca será 0
+    public int decisionParaCuestas;
 
 
     void Start()
@@ -18,32 +21,41 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) && canChangeTrack) // solo al pulsar una vez
+        if (Input.GetKeyDown(KeyCode.UpArrow) && canChangeTrack&&decision!=1) // solo al pulsar una vez
         {
-            audioSource.volume = 1f; // 0 = silencio, 1 = volumen completo
-            audioSource.clip = palancaSound;
+          
+            audioSource.clip = palancaArribaSound;
             decision = 1;
+            decisionParaCuestas = decision;
             audioSource.Play(); // suena la palanca
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow) && canChangeTrack)
+        if (Input.GetKeyDown(KeyCode.DownArrow) && canChangeTrack && decision != 2)
         {
-            audioSource.volume = 1f; // 0 = silencio, 1 = volumen completo
-            audioSource.clip = palancaSound;
+        
+            audioSource.clip = palancaAbajoSound;
             decision = 2;
+            decisionParaCuestas = decision;
             audioSource.Play(); // también puedes hacer sonar aquí si deseas
         }
 
         
             // Si antes era 1 o 2, y ahora pasó a 0, entonces reproduce el sonido
-            if ((lastDecision == 1 || lastDecision == 2) && decision == 0)
+            if ((lastDecision == 1 ) && decision == 0)
             {
-            audioSource.volume = 0.5f; // 0 = silencio, 1 = volumen completo
-            audioSource.clip = palancaReturnSound;
+         
+            audioSource.clip = palancaArribaMedioSound;
                 audioSource.Play();
             }
+              // Si antes era 1 o 2, y ahora pasó a 0, entonces reproduce el sonido
+            if ((lastDecision == 2) && decision == 0)
+            {
+            audioSource.clip = palancaAbajoMedioSound;
+            audioSource.Play();
+             }
 
-            lastDecision = decision; // Actualizamos el valor anterior al final
+
+        lastDecision = decision; // Actualizamos el valor anterior al final
         
     }
 }

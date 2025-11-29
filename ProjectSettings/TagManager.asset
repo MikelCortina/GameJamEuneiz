@@ -6,6 +6,22 @@ TagManager:
   tags:
   - ResetPoint
   - ActionPoint
+  - Arriba1
+  - Arriba2
+  - Arriba3
+  - Arriba4
+  - Idle
+  - Abajo1
+  - Abajo2
+  - Abajo3
+  - Abajo4
+  - ArribaAbajo1
+  - ArribaAbajo2
+  - ArribaAbajo3
+  - AbajoArriba1
+  - AbajoArriba2
+  - AbajoArriba3
+  - AbajoArriba4
   layers:
   - Default
   - TransparentFX

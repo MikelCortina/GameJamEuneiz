@@ -19,7 +19,7 @@ public class RunAudio : MonoBehaviour
 
     public void StartRun()
     {
-        audioSource.volume = 0.25f; // 0 = silencio, 1 = volumen completo
+        audioSource.volume = 0.35f; // 0 = silencio, 1 = volumen completo
         if (!audioSource.isPlaying)
             audioSource.Play();
     }

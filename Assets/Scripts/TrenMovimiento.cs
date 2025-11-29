@@ -9,35 +9,50 @@ public class TrenMovimiento : MonoBehaviour
     public GameObject actionPoint;
     public float distanciaEntrePuntos = 40f;
     public float alturaCambio = 3f;
-    public Animator animator;
 
     public float velocidadVertical = 5f; // Velocidad del Lerp vertical
 
     private Vector3 targetPosition;
+
+    [SerializeField] private float smoothTimeVertical = 0.25f; // Tiempo de suavizado vertical
+    private float velocityY = 0f; // Necesario para SmoothDamp
+
+ 
 
     void Start()
     {
         targetPosition = transform.position; // iniciar posición objetivo
     }
 
+
+
     void Update()
     {
-        // Movimiento horizontal constante
-        transform.position += new Vector3(velocidad, 0, 0) * Time.deltaTime;
+        // Movimiento horizontal constante (puedes seguir reduciéndolo si quieres)
+        float horizontalSpeed = velocidad;
 
-        // Movimiento vertical suave hacia la posición objetivo
-        transform.position = Vector3.Lerp(
-            transform.position,
-            new Vector3(transform.position.x, targetPosition.y, transform.position.z),
-            Time.deltaTime * velocidadVertical
+        float verticalDiff = Mathf.Abs(transform.position.y - targetPosition.y);
+        if (verticalDiff > 0.01f)
+            horizontalSpeed *= 0.85f; // opcional: más lento mientras sube/baja
+
+        transform.position += Vector3.right * horizontalSpeed * Time.deltaTime;
+
+        // <<< AQUÍ ESTÁ LA MAGIA >>>
+        // Suavizado natural con curva de aceleración/desaceleración
+        float newY = Mathf.SmoothDamp(
+            transform.position.y,
+            targetPosition.y,
+            ref velocityY,
+            smoothTimeVertical
         );
 
+        transform.position = new Vector3(transform.position.x, newY, transform.position.z);
     }
 
     void IrPorArriba()
     {
         targetPosition = new Vector3(transform.position.x, transform.position.y + alturaCambio, transform.position.z);
-        animator.Play("ArribaTren", -1, 0f);
+
     }
 
     void IrPorAbajo()
