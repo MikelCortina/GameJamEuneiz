@@ -119,126 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &439922736
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 439922737}
-  - component: {fileID: 439922738}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &439922737
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439922736}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1174037452}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &439922738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439922736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52e65716da5d9174294d8a9a3dd062b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TileSpawner2D
-  tilePrefabs:
-  - {fileID: 5058540289959076811, guid: aa2c0a9eefb8fb645b4ee18a4697fa54, type: 3}
-  - {fileID: 6767790086401932061, guid: 33c35280a40393548a925f706aa3e727, type: 3}
-  poolSize: 10
-  cam: {fileID: 2044960614}
-  distanceToSpawn: 15
---- !u!1 &758539439
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 758539440}
-  - component: {fileID: 758539441}
-  - component: {fileID: 758539442}
-  m_Layer: 0
-  m_Name: TrailSapwner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &758539440
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 758539439}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1174037452}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &758539441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 758539439}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52e65716da5d9174294d8a9a3dd062b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TileSpawner2D
-  tilePrefabs:
-  - {fileID: 2322766034783050394, guid: 780e63e08c58dac4a970dff3774f3f46, type: 3}
-  - {fileID: 3660771689486640863, guid: 7cd2fe5948d28b449a2b9f8b40029503, type: 3}
-  poolSize: 10
-  cam: {fileID: 2044960614}
-  distanceToSpawn: 15
---- !u!114 &758539442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 758539439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e950cafae2a2b71468f9bc9b73f535d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectSpawner
-  prefabs:
-  - {fileID: 2322766034783050394, guid: 780e63e08c58dac4a970dff3774f3f46, type: 3}
-  - {fileID: 3660771689486640863, guid: 7cd2fe5948d28b449a2b9f8b40029503, type: 3}
-  poolSize: 10
-  spawnDistance: 16.5
-  cameraTransform: {fileID: 2044960614}
-  triggerX: 10
 --- !u!1 &846694617
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,10 +153,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Trenmovimiento
   velocidad: 8
   gameManager: {fileID: 1174037451}
-  resetPoint: {fileID: 8072278555775435817, guid: 94cede989761680469f6fb11b27c1f6e, type: 3}
-  actionPoint: {fileID: 5784169190170006877, guid: ded393eef766471488d5d9a4e2d6103c, type: 3}
+  resetPoint: {fileID: 0}
+  actionPoint: {fileID: 0}
   distanciaEntrePuntos: 40
-  alturaCambio: 3
   velocidadVertical: 5
 --- !u!212 &846694619
 SpriteRenderer:
@@ -325,8 +204,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: b6b619219584a434d82734c580fbd99e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -346,7 +225,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -416,7 +295,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 3.6}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -424,6 +303,56 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &956715949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 956715950}
+  - component: {fileID: 956715951}
+  m_Layer: 0
+  m_Name: TrailSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &956715950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956715949}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1174037452}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &956715951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956715949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e65716da5d9174294d8a9a3dd062b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileSpawner2D
+  tilePrefabs:
+  - {fileID: 2322766034783050394, guid: 780e63e08c58dac4a970dff3774f3f46, type: 3}
+  - {fileID: 3660771689486640863, guid: 7cd2fe5948d28b449a2b9f8b40029503, type: 3}
+  poolSize: 10
+  cam: {fileID: 2044960614}
+  distanceToSpawn: 15
 --- !u!1 &1174037450
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,8 +396,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 758539440}
-  - {fileID: 439922737}
+  - {fileID: 956715950}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2044960611
@@ -483,7 +411,6 @@ GameObject:
   - component: {fileID: 2044960613}
   - component: {fileID: 2044960612}
   - component: {fileID: 2044960615}
-  - component: {fileID: 2044960616}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -609,20 +536,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &2044960616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2044960611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db6b2e5fb982f5f47b40dcfc2341cb4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
-  target: {fileID: 846694620}
-  offset: {x: 0, y: 0, z: -10}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

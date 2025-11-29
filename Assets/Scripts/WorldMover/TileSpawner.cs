@@ -1,36 +1,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileSpawner : MonoBehaviour
+public class TileSpawner2D : MonoBehaviour
 {
     [Header("Pool Tiles")]
-    public GameObject[] tilePrefabs;
+    public GameObject[] tilePrefabs; // Prefabs 2D (con SpriteRenderer y Collider2D)
     public int poolSize = 10;
 
     [Header("Spawn")]
-    public Transform cam;
-    public float distanceToSpawn = 30f;
+    public Transform cam; // Cámara principal (debe moverse hacia la derecha)
+    public float distanceToSpawn = 15f; // Distancia en X para spawnear el siguiente
 
     private Queue<GameObject> pool;
     private GameObject lastTile;
-
     private int prefabIndex = 0; // Control de alternancia
 
     void Start()
     {
         pool = new Queue<GameObject>();
 
-        // Se generará el pool alternando prefabs
+        // Genera el pool alternando prefabs
         for (int i = 0; i < poolSize; i++)
         {
             GameObject t = Instantiate(tilePrefabs[prefabIndex]);
             prefabIndex = (prefabIndex + 1) % tilePrefabs.Length;
-
             t.SetActive(false);
+            // Asegura posición 2D (Z=0)
+            t.transform.position = new Vector3(0, 0, 0);
+            t.transform.rotation = Quaternion.identity;
             pool.Enqueue(t);
         }
-
-        prefabIndex = 0; // reseteamos para uso real en SpawnTile
+        prefabIndex = 0; // Reset para spawn real
         SpawnTile();
     }
 
@@ -38,7 +38,8 @@ public class TileSpawner : MonoBehaviour
     {
         if (lastTile == null) return;
 
-        if (Vector3.Distance(cam.position, lastTile.transform.position) < distanceToSpawn)
+        // Chequeo preciso en eje X (para 2D horizontal)
+        if (Mathf.Abs(cam.position.x - lastTile.transform.position.x) < distanceToSpawn)
             SpawnTile();
     }
 
@@ -46,36 +47,44 @@ public class TileSpawner : MonoBehaviour
     {
         GameObject tile = pool.Dequeue();
 
-        // Cambiar el mesh del objeto añadiendo el siguiente prefab
-        // solo si hay más de un tipo disponible
+        // Cambia el "modelo" (child) alternando prefabs (solo si >1 tipo)
         if (tilePrefabs.Length > 1)
         {
+            // Destruye modelo anterior si existe
+            if (tile.transform.childCount > 0)
+                Destroy(tile.transform.GetChild(0).gameObject);
+
+            // Instancia nuevo como child
             GameObject newModel = Instantiate(tilePrefabs[prefabIndex], tile.transform);
             prefabIndex = (prefabIndex + 1) % tilePrefabs.Length;
 
-            // Destruye el modelo anterior si existe
-            if (tile.transform.childCount > 1)
-                Destroy(tile.transform.GetChild(0).gameObject);
+            // Asegura 2D en el child
+            newModel.transform.localPosition = Vector3.zero;
+            newModel.transform.localRotation = Quaternion.identity;
         }
 
         tile.SetActive(true);
 
+        // Posición: siempre avanza en X positivo (hacia la derecha)
         if (lastTile == null)
             tile.transform.position = Vector3.zero;
         else
             tile.transform.position = lastTile.transform.position + GetTileForwardOffset(lastTile);
 
+        // Mantiene Z=0 para 2D
+        tile.transform.position = new Vector3(tile.transform.position.x, tile.transform.position.y, 0);
+
         lastTile = tile;
         pool.Enqueue(tile);
     }
 
+    // Offset SIEMPRE en X (derecha) para 2D endless runner horizontal
     Vector3 GetTileForwardOffset(GameObject tile)
     {
-        Renderer r = tile.GetComponentInChildren<Renderer>();
-        Vector3 size = r.bounds.size;
+        Renderer r = tile.GetComponentInChildren<Renderer>(); // Funciona con SpriteRenderer
+        if (r == null) return Vector3.right * 10f; // Fallback
 
-        if (size.z >= size.x && size.z >= size.y) return new Vector3(0, 0, size.z);
-        if (size.x >= size.y) return new Vector3(size.x, 0, 0);
-        return new Vector3(0, size.y, 0);
+        float tileWidth = r.bounds.size.x;
+        return Vector3.right * tileWidth; // Avanza exactamente el ancho del tile
     }
 }
