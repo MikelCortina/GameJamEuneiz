@@ -5,6 +5,7 @@ public class TrenMovimiento : MonoBehaviour
 {
     [SerializeField] public float velocidad = 5f;
     public GameManager gameManager;
+    public SpawnManager spawnManager;
     public GameObject resetPoint;
     public GameObject actionPoint;
     public float distanciaEntrePuntos = 40f;
@@ -80,6 +81,7 @@ public class TrenMovimiento : MonoBehaviour
         if (collision.CompareTag("ActionPoint"))
         {
             Debug.Log("ACCION");
+            spawnManager.Randomizar();
             //actionPoint.transform.position += new Vector3(distanciaEntrePuntos, 0, 0);
 
             if (gameManager.decision == 1)
