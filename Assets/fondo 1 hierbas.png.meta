@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 8d55f42525b5dd441a36ecbc5773f13e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4640107147669331733
+    second: fondo 1 hierbas_0
+  - first:
+      213: 1147861278028182167
+    second: fondo 1 hierbas_1
+  - first:
+      213: -1407180728613490346
+    second: fondo 1 hierbas_2
+  - first:
+      213: 5816508761813418141
+    second: fondo 1 hierbas_3
+  - first:
+      213: -235793693056868537
+    second: fondo 1 hierbas_4
+  - first:
+      213: -678279016396256329
+    second: fondo 1 hierbas_5
+  - first:
+      213: 521127532928882169
+    second: fondo 1 hierbas_6
+  - first:
+      213: 8659108392377311880
+    second: fondo 1 hierbas_7
+  - first:
+      213: -1595006587594961076
+    second: fondo 1 hierbas_8
+  - first:
+      213: -4600617278373385551
+    second: fondo 1 hierbas_9
+  - first:
+      213: -169728361071306241
+    second: fondo 1 hierbas_10
+  - first:
+      213: 8190192804421902159
+    second: fondo 1 hierbas_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fondo 1 hierbas_0
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 1549
+        width: 152
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be02b6f22270b9fb0800000000000000
+      internalID: -4640107147669331733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 1 hierbas_1
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 1561
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 792bb4030c50eef00800000000000000
+      internalID: 1147861278028182167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 1 hierbas_2
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 1480
+        width: 146
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 651b7383590b87ce0800000000000000
+      internalID: -1407180728613490346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 1 hierbas_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1432
+        width: 187
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9006d4d6e368b050800000000000000
+      internalID: 5816508761813418141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 1 hierbas_4
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 1435
+        width: 23
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74f511da2ea4abcf0800000000000000
+      internalID: -235793693056868537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 1 hierbas_5
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 1357
+        width: 377
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb891904d44696f0800000000000000
+      internalID: -678279016396256329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 1 hierbas_6
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 1295
+        width: 81
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f5d6eaeaba6b3700800000000000000
+      internalID: 521127532928882169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 1 hierbas_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 955
+        width: 67
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 882e04774355b2870800000000000000
+      internalID: 8659108392377311880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 1 hierbas_8
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 928
+        width: 189
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4f8ef395f56dd9e0800000000000000
+      internalID: -1595006587594961076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 1 hierbas_9
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 802
+        width: 57
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1baa70fd5f25720c0800000000000000
+      internalID: -4600617278373385551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 1 hierbas_10
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 829
+        width: 106
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff9190274f005adf0800000000000000
+      internalID: -169728361071306241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 1 hierbas_11
+      rect:
+        serializedVersion: 2
+        x: 1589
+        y: 836
+        width: 250
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f178d46f869a170800000000000000
+      internalID: 8190192804421902159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fondo 1 hierbas_0: -4640107147669331733
+      fondo 1 hierbas_1: 1147861278028182167
+      fondo 1 hierbas_10: -169728361071306241
+      fondo 1 hierbas_11: 8190192804421902159
+      fondo 1 hierbas_2: -1407180728613490346
+      fondo 1 hierbas_3: 5816508761813418141
+      fondo 1 hierbas_4: -235793693056868537
+      fondo 1 hierbas_5: -678279016396256329
+      fondo 1 hierbas_6: 521127532928882169
+      fondo 1 hierbas_7: 8659108392377311880
+      fondo 1 hierbas_8: -1595006587594961076
+      fondo 1 hierbas_9: -4600617278373385551
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

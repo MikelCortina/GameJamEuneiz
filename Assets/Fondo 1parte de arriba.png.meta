@@ -1,0 +1,351 @@
+fileFormatVersion: 2
+guid: 53e1c36539f2a3d44a6ae153f6c27014
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4430594340136253982
+    second: Fondo 1parte de arriba_0
+  - first:
+      213: -2148056688119003512
+    second: Fondo 1parte de arriba_1
+  - first:
+      213: 1034833088840216980
+    second: Fondo 1parte de arriba_2
+  - first:
+      213: 2082069551606837780
+    second: Fondo 1parte de arriba_3
+  - first:
+      213: 5302140447481945249
+    second: Fondo 1parte de arriba_4
+  - first:
+      213: 6842578031564234144
+    second: Fondo 1parte de arriba_5
+  - first:
+      213: -2266975546454794078
+    second: Fondo 1parte de arriba_6
+  - first:
+      213: -8869664272447762073
+    second: Fondo 1parte de arriba_7
+  - first:
+      213: -1575490468567518789
+    second: Fondo 1parte de arriba_8
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fondo 1parte de arriba_0
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 1660
+        width: 228
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1a7dabf312ac7d30800000000000000
+      internalID: 4430594340136253982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fondo 1parte de arriba_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 974
+        width: 905
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 886c343b2d19032e0800000000000000
+      internalID: -2148056688119003512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fondo 1parte de arriba_2
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 979
+        width: 40
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 491342626377c5e00800000000000000
+      internalID: 1034833088840216980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fondo 1parte de arriba_3
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 829
+        width: 329
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 412be25d93ff4ec10800000000000000
+      internalID: 2082069551606837780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fondo 1parte de arriba_4
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 652
+        width: 200
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ac546125acf49940800000000000000
+      internalID: 5302140447481945249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fondo 1parte de arriba_5
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 667
+        width: 338
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad17475778b5fe50800000000000000
+      internalID: 6842578031564234144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fondo 1parte de arriba_6
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 517
+        width: 196
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a0a01f50c51a80e0800000000000000
+      internalID: -2266975546454794078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fondo 1parte de arriba_7
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 460
+        width: 239
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76117c3765f98e480800000000000000
+      internalID: -8869664272447762073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fondo 1parte de arriba_8
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 322
+        width: 237
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb1f40224cbb22ae0800000000000000
+      internalID: -1575490468567518789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Fondo 1parte de arriba_0: 4430594340136253982
+      Fondo 1parte de arriba_1: -2148056688119003512
+      Fondo 1parte de arriba_2: 1034833088840216980
+      Fondo 1parte de arriba_3: 2082069551606837780
+      Fondo 1parte de arriba_4: 5302140447481945249
+      Fondo 1parte de arriba_5: 6842578031564234144
+      Fondo 1parte de arriba_6: -2266975546454794078
+      Fondo 1parte de arriba_7: -8869664272447762073
+      Fondo 1parte de arriba_8: -1575490468567518789
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

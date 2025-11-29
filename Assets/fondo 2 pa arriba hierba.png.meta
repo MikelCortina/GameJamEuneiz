@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: f8d46ae812c4eb44f812ee88c2877f2c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 91338790365563299
+    second: fondo 2 pa arriba hierba_0
+  - first:
+      213: 6238892892624477849
+    second: fondo 2 pa arriba hierba_1
+  - first:
+      213: 1910085320057638136
+    second: fondo 2 pa arriba hierba_2
+  - first:
+      213: 8812768357769083571
+    second: fondo 2 pa arriba hierba_3
+  - first:
+      213: -8506279249303141907
+    second: fondo 2 pa arriba hierba_4
+  - first:
+      213: 4879991284078120029
+    second: fondo 2 pa arriba hierba_5
+  - first:
+      213: 7421187178020892302
+    second: fondo 2 pa arriba hierba_6
+  - first:
+      213: 8162280775971389411
+    second: fondo 2 pa arriba hierba_7
+  - first:
+      213: -8632312104023722106
+    second: fondo 2 pa arriba hierba_8
+  - first:
+      213: 5669424422009812069
+    second: fondo 2 pa arriba hierba_9
+  - first:
+      213: -5112367488934383403
+    second: fondo 2 pa arriba hierba_10
+  - first:
+      213: -4283601933539763152
+    second: fondo 2 pa arriba hierba_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fondo 2 pa arriba hierba_0
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 1450
+        width: 161
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a904f95520844100800000000000000
+      internalID: 91338790365563299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 2 pa arriba hierba_1
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 1483
+        width: 135
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99e5790e700059650800000000000000
+      internalID: 6238892892624477849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 2 pa arriba hierba_2
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1474
+        width: 272
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc49b08a7cf18a10800000000000000
+      internalID: 1910085320057638136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 2 pa arriba hierba_3
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1414
+        width: 187
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3baf0ac112e3d4a70800000000000000
+      internalID: 8812768357769083571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 2 pa arriba hierba_4
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 1480
+        width: 72
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de182094710a3f980800000000000000
+      internalID: -8506279249303141907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 2 pa arriba hierba_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1261
+        width: 196
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5c8a72b73639b340800000000000000
+      internalID: 4879991284078120029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 2 pa arriba hierba_6
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 850
+        width: 263
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e6e955b6a5df660800000000000000
+      internalID: 7421187178020892302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 2 pa arriba hierba_7
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 691
+        width: 147
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ef36c0ce1f364170800000000000000
+      internalID: 8162280775971389411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 2 pa arriba hierba_8
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 667
+        width: 254
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6877c5990edd33880800000000000000
+      internalID: -8632312104023722106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 2 pa arriba hierba_9
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 24
+        width: 102
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 564b1d25977ddae40800000000000000
+      internalID: 5669424422009812069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 2 pa arriba hierba_10
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 233
+        width: 61
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d07fc4fad83d09b0800000000000000
+      internalID: -5112367488934383403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fondo 2 pa arriba hierba_11
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 248
+        width: 49
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03c9f28acb69d84c0800000000000000
+      internalID: -4283601933539763152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fondo 2 pa arriba hierba_0: 91338790365563299
+      fondo 2 pa arriba hierba_1: 6238892892624477849
+      fondo 2 pa arriba hierba_10: -5112367488934383403
+      fondo 2 pa arriba hierba_11: -4283601933539763152
+      fondo 2 pa arriba hierba_2: 1910085320057638136
+      fondo 2 pa arriba hierba_3: 8812768357769083571
+      fondo 2 pa arriba hierba_4: -8506279249303141907
+      fondo 2 pa arriba hierba_5: 4879991284078120029
+      fondo 2 pa arriba hierba_6: 7421187178020892302
+      fondo 2 pa arriba hierba_7: 8162280775971389411
+      fondo 2 pa arriba hierba_8: -8632312104023722106
+      fondo 2 pa arriba hierba_9: 5669424422009812069
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
