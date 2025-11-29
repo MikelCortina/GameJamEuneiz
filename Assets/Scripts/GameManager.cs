@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,9 +10,37 @@ public class GameManager : MonoBehaviour
     public AudioClip palancaAbajoMedioSound;
     public AudioSource audioSource;
     public bool canChangeTrack = true;
-    public int lastDecision = -1; // valor inicial que nunca será 0
+    public int lastDecision = -1; // valor inicial que nunca serï¿½ 0
     public int decisionParaCuestas;
 
+    public InputActionAsset inputActions; // Referencia al asset input actions 
+
+    private InputAction Arriba;
+    private InputAction Abajo;
+
+    private void OnEnable()
+    {
+        if (inputActions == null)
+        {
+            Debug.LogWarning("InputActionAsset no asignado en el inspector.");
+            return;
+        }
+
+        // Buscar las acciones por ruta (ajusta el nombre del action map / acciÃ³n si es distinto)
+        Arriba = inputActions.FindAction("Player Controls/Up");
+        Abajo  = inputActions.FindAction("Player Controls/Down");
+
+        // Enable the actions
+        Arriba.Enable();
+        Abajo.Enable();        
+    }
+
+    private void OnDisable()
+    {
+        // Disable the actions
+        Arriba.Disable();
+        Abajo.Disable();
+    }
 
     void Start()
     {
@@ -21,7 +50,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) && canChangeTrack&&decision!=1) // solo al pulsar una vez
+        if (Arriba.triggered && canChangeTrack&&decision!=1) // solo al pulsar una vez
         {
           
             audioSource.clip = palancaArribaSound;
@@ -30,24 +59,24 @@ public class GameManager : MonoBehaviour
             audioSource.Play(); // suena la palanca
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow) && canChangeTrack && decision != 2)
+        if (Abajo.triggered && canChangeTrack && decision != 2)
         {
         
             audioSource.clip = palancaAbajoSound;
             decision = 2;
             decisionParaCuestas = decision;
-            audioSource.Play(); // también puedes hacer sonar aquí si deseas
+            audioSource.Play(); // tambiï¿½n puedes hacer sonar aquï¿½ si deseas
         }
 
         
-            // Si antes era 1 o 2, y ahora pasó a 0, entonces reproduce el sonido
+            // Si antes era 1 o 2, y ahora pasï¿½ a 0, entonces reproduce el sonido
             if ((lastDecision == 1 ) && decision == 0)
             {
          
             audioSource.clip = palancaArribaMedioSound;
                 audioSource.Play();
             }
-              // Si antes era 1 o 2, y ahora pasó a 0, entonces reproduce el sonido
+              // Si antes era 1 o 2, y ahora pasï¿½ a 0, entonces reproduce el sonido
             if ((lastDecision == 2) && decision == 0)
             {
             audioSource.clip = palancaAbajoMedioSound;
