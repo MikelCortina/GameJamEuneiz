@@ -15,6 +15,8 @@ public class EntidadData : MonoBehaviour
 
     public AudioClip sonido;
 
+    public AudioSource audioSource;
+
     [TextArea]
     public string descripcion; // opcional
 
@@ -23,7 +25,11 @@ public class EntidadData : MonoBehaviour
         Debug.Log("Atropellado");
         estaVivo = false;
         //animacion
+
         //sonido
+        audioSource.clip = sonido;
+        audioSource.Play();
+
         Destroy(gameObject,5f);
     }
 }
