@@ -1165,6 +1165,7 @@ MonoBehaviour:
   canChangeTrack: 1
   lastDecision: -1
   decisionParaCuestas: 0
+  inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
 --- !u!4 &1174037452
 Transform:
   m_ObjectHideFlags: 0
