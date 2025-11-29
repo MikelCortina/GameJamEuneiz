@@ -402,6 +402,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632149a61f24c4047b14c2a941b9f334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
+  randomA: 0
+  randomB: 0
+  resetPoint: {fileID: 8072278555775435817, guid: 94cede989761680469f6fb11b27c1f6e, type: 3}
+  ActionPoint: {fileID: 5784169190170006877, guid: ded393eef766471488d5d9a4e2d6103c, type: 3}
+  listaObjetos:
+  - {fileID: 882814136391798567, guid: 3482f704c2ae9034fa127cdeb4bbd20e, type: 3}
+  - {fileID: 882814136391798567, guid: 1857f08e3a97b684cab09974176a2d98, type: 3}
+  - {fileID: 882814136391798567, guid: 674b98d0456ebc04cb6bb738a075e9b5, type: 3}
+  - {fileID: 882814136391798567, guid: ef8aba102dd7c134bb83fa7349cd6f30, type: 3}
+  - {fileID: 882814136391798567, guid: 51e96b56693433c49a6ef3f64682474e, type: 3}
+  - {fileID: 882814136391798567, guid: 83b986f3afb6a4c4fa738467e75508f4, type: 3}
+  - {fileID: 882814136391798567, guid: c3ed56e9ea1188e45a1da7b929d4f87f, type: 3}
+  - {fileID: 882814136391798567, guid: d8972885b5457db44b57304f6834f20b, type: 3}
+  - {fileID: 882814136391798567, guid: 3ec3cf471257472488c27e673e276e80, type: 3}
+  puntoA: {x: 0, y: 0, z: 0}
+  puntoB: {x: 0, y: 0, z: 0}
 --- !u!4 &868835640
 Transform:
   m_ObjectHideFlags: 0
@@ -834,6 +850,10 @@ PrefabInstance:
       propertyPath: palancaSound
       value: 
       objectReference: {fileID: 8300000, guid: 4b4fdf0c2030a1149bc08d7a61409e62, type: 3}
+    - target: {fileID: 323862502288570631, guid: 2f4265453b4daac43b5eeb70cb8e545e, type: 3}
+      propertyPath: spawnManager
+      value: 
+      objectReference: {fileID: 868835639}
     - target: {fileID: 323862502288570631, guid: 2f4265453b4daac43b5eeb70cb8e545e, type: 3}
       propertyPath: velocidadVertical
       value: 3.3
