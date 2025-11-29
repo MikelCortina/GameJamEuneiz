@@ -1,43 +1,41 @@
 using System.Collections.Generic;
 using UnityEngine;
+
 public class SpawnManager : MonoBehaviour
 {
     public GameObject player;
-    public int randomA;
-    public int randomB;
-    public GameObject GOPointA;
-    public GameObject GOPointB;
     public List<GameObject> listaObjetos;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
+    private int randomA;
+    private int randomB;
 
-    }
+    // Ya no necesitas GOPointA ni GOPointB como GameObjects en escena
+
     public void Randomizar()
     {
+        // Elegimos dos índices aleatorios (pueden ser el mismo, si quieres evitarlo dime)
         randomA = Random.Range(0, listaObjetos.Count);
-        Debug.Log("A: " + randomA);
         randomB = Random.Range(0, listaObjetos.Count);
-        Debug.Log("B: " + randomB);
 
-        //CAMBIO DE PUNTOS
-        Debug.Log("player x: " + player.transform.position.x);
-        Debug.Log("player y: " + player.transform.position.y);
-        Debug.Log("player z: " + player.transform.position.z);
-        GOPointA.transform.position = player.transform.position + new Vector3(41,1.5f,0);
-        GOPointB.transform.position = player.transform.position + new Vector3(41,-1.5f,0);
+        Debug.Log("Spawn A en índice: " + randomA);
+        Debug.Log("Spawn B en índice: " + randomB);
 
-        // Instanciar GameObjects en la posición deseada
-        if (listaObjetos[randomA] != null && GOPointA.transform.position != null)
-            Instantiate(listaObjetos[randomA], GOPointA.transform.position, Quaternion.identity);
+        // Posición base del jugador
+        Vector3 posicionJugador = player.transform.position;
 
-        if (listaObjetos[randomB] != null && GOPointB.transform.position != null)
-            Instantiate(listaObjetos[randomB], GOPointB.transform.position, Quaternion.identity);
+        // Posiciones relativas que antes ponías en GOPointA y GOPointB
+        Vector3 posicionA = posicionJugador + new Vector3(43f, 1.5f, 0f);
+        Vector3 posicionB = posicionJugador + new Vector3(43f, -1.5f, 0f);
+
+        // Instanciamos directamente en esas posiciones calculadas
+        if (listaObjetos[randomA] != null)
+        {
+            Instantiate(listaObjetos[randomA], posicionA, Quaternion.identity);
+        }
+
+        if (listaObjetos[randomB] != null)
+        {
+            Instantiate(listaObjetos[randomB], posicionB, Quaternion.identity);
+        }
     }
 }
