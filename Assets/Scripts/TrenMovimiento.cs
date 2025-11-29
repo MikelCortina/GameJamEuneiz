@@ -61,12 +61,12 @@ public class TrenMovimiento : MonoBehaviour
             gameManager.decision = 0;
             //resetPoint.transform.position += new Vector3(distanciaEntrePuntos, 0, 0);
             IrPorElMedio();
-            spawnManager.Randomizar();
         }
 
         if (collision.CompareTag("ActionPoint"))
         {
             Debug.Log("ACCION");
+            spawnManager.Randomizar();
             //actionPoint.transform.position += new Vector3(distanciaEntrePuntos, 0, 0);
 
             if (gameManager.decision == 1)

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
+    public GameObject player;
     public int randomA;
     public int randomB;
     public GameObject GOPointA;
@@ -10,7 +11,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Randomizar();
+        
     }
 
     // Update is called once per frame
@@ -25,15 +26,18 @@ public class SpawnManager : MonoBehaviour
         randomB = Random.Range(0, listaObjetos.Count);
         Debug.Log("B: " + randomB);
 
+        //CAMBIO DE PUNTOS
+        Debug.Log("player x: " + player.transform.position.x);
+        Debug.Log("player y: " + player.transform.position.y);
+        Debug.Log("player z: " + player.transform.position.z);
+        GOPointA.transform.position = player.transform.position + new Vector3(41,1.5f,0);
+        GOPointB.transform.position = player.transform.position + new Vector3(41,-1.5f,0);
+
         // Instanciar GameObjects en la posición deseada
         if (listaObjetos[randomA] != null && GOPointA.transform.position != null)
             Instantiate(listaObjetos[randomA], GOPointA.transform.position, Quaternion.identity);
 
         if (listaObjetos[randomB] != null && GOPointB.transform.position != null)
             Instantiate(listaObjetos[randomB], GOPointB.transform.position, Quaternion.identity);
-
-        //CAMBIO DE PUNTOS
-            GOPointA.transform.position += new Vector3(40,0,0);
-            GOPointB.transform.position += new Vector3(40, 0, 0);
     }
 }
