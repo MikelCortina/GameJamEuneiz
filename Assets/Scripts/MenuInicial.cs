@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using SystemCollections;
-using SystemCollections.Generic;
 
 public class MenuInicial : MonoBehaviour
 {
