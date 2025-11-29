@@ -1,90 +1,132 @@
-using System.Collections.Generic;
+ï»¿using System.Collections.Generic;
 using UnityEngine;
 
 public class TileSpawner2D : MonoBehaviour
 {
     [Header("Pool Tiles")]
-    public GameObject[] tilePrefabs; // Prefabs 2D (con SpriteRenderer y Collider2D)
-    public int poolSize = 10;
+    public GameObject[] tilePrefabs;        // Ej: [0] = TileA, [1] = TileB
+    public int poolSize = 20;
 
-    [Header("Spawn")]
-    public Transform cam; // Cámara principal (debe moverse hacia la derecha)
-    public float distanceToSpawn = 15f; // Distancia en X para spawnear el siguiente
+    [Header("Spawn Settings")]
+    public Transform cam;
+    public float distanceToSpawn = 15f;
 
-    private Queue<GameObject> pool;
+    [Header("Punto de inicio en el mundo")]
+    public float startXPosition = 0f;
+
+    private Queue<GameObject> pool = new Queue<GameObject>();
     private GameObject lastTile;
-    private int prefabIndex = 0; // Control de alternancia
+    private int currentPrefabIndex = 0;          // Este controla la alternancia limpia
+    private float lastTileRightX = 0f;
 
     void Start()
     {
-        pool = new Queue<GameObject>();
+        if (cam == null) cam = Camera.main.transform;
+        if (tilePrefabs == null || tilePrefabs.Length == 0)
+        {
+            Debug.LogError("No hay tilePrefabs asignados!");
+            return;
+        }
 
-        // Genera el pool alternando prefabs
+        // === CREAR POOL LIMPIO ===
         for (int i = 0; i < poolSize; i++)
         {
-            GameObject t = Instantiate(tilePrefabs[prefabIndex]);
-            prefabIndex = (prefabIndex + 1) % tilePrefabs.Length;
-            t.SetActive(false);
-            // Asegura posición 2D (Z=0)
-            t.transform.position = new Vector3(0, 0, 0);
-            t.transform.rotation = Quaternion.identity;
-            pool.Enqueue(t);
+            // Usamos siempre el prefab vacÃ­o o uno base si quieres, pero mejor uno "container"
+            GameObject container = new GameObject("PooledTileContainer");
+            container.SetActive(false);
+            pool.Enqueue(container);
         }
-        prefabIndex = 0; // Reset para spawn real
-        SpawnTile();
+
+        transform.position = new Vector3(startXPosition, transform.position.y, transform.position.z);
+        lastTileRightX = startXPosition;
+
+        SpawnInitialTile();
     }
 
     void Update()
     {
         if (lastTile == null) return;
 
-        // Chequeo preciso en eje X (para 2D horizontal)
-        if (Mathf.Abs(cam.position.x - lastTile.transform.position.x) < distanceToSpawn)
+        float distanceToRightEdge = cam.position.x - lastTileRightX;
+        if (distanceToRightEdge > -distanceToSpawn)
+        {
             SpawnTile();
+        }
+    }
+
+    void SpawnInitialTile()
+    {
+        SpawnTile();
     }
 
     void SpawnTile()
     {
-        GameObject tile = pool.Dequeue();
-
-        // Cambia el "modelo" (child) alternando prefabs (solo si >1 tipo)
-        if (tilePrefabs.Length > 1)
+        if (pool.Count == 0)
         {
-            // Destruye modelo anterior si existe
-            if (tile.transform.childCount > 0)
-                Destroy(tile.transform.GetChild(0).gameObject);
-
-            // Instancia nuevo como child
-            GameObject newModel = Instantiate(tilePrefabs[prefabIndex], tile.transform);
-            prefabIndex = (prefabIndex + 1) % tilePrefabs.Length;
-
-            // Asegura 2D en el child
-            newModel.transform.localPosition = Vector3.zero;
-            newModel.transform.localRotation = Quaternion.identity;
+            Debug.LogWarning("Pool vacÃ­o! Aumenta poolSize.");
+            return;
         }
 
-        tile.SetActive(true);
+        GameObject tileContainer = pool.Dequeue();
+        tileContainer.SetActive(true);
 
-        // Posición: siempre avanza en X positivo (hacia la derecha)
+        // === LIMPIAR HIJOS ANTERIORES (importante para evitar clones/solapes) ===
+        foreach (Transform child in tileContainer.transform)
+        {
+            if (Application.isPlaying)
+                Destroy(child.gameObject);
+            else
+                DestroyImmediate(child.gameObject);
+        }
+
+        // === INSTANCIAR EL NUEVO PREFAB DENTRO DEL CONTENEDOR ===
+        GameObject newTile = Instantiate(tilePrefabs[currentPrefabIndex], tileContainer.transform);
+        newTile.transform.localPosition = Vector3.zero;
+        newTile.transform.localRotation = Quaternion.identity;
+
+        // === POSICIONAR EL CONTENEDOR ===
         if (lastTile == null)
-            tile.transform.position = Vector3.zero;
+        {
+            // Primer tile
+            float halfWidth = GetTileHalfWidth(newTile);
+
+            // Instanciamos o activamos el tile dentro del contenedor
+            tileContainer.transform.position = new Vector3(
+                startXPosition + halfWidth,
+                transform.position.y,
+                0f
+            );
+        }
         else
-            tile.transform.position = lastTile.transform.position + GetTileForwardOffset(lastTile);
+        {
+            Vector3 offset = GetTileForwardOffset(lastTile);
+            tileContainer.transform.position = lastTile.transform.position + offset;
+        }
 
-        // Mantiene Z=0 para 2D
-        tile.transform.position = new Vector3(tile.transform.position.x, tile.transform.position.y, 0);
+        // Actualizar borde derecho
+        lastTileRightX = tileContainer.transform.position.x + GetTileHalfWidth(newTile);
+        lastTile = tileContainer;
 
-        lastTile = tile;
-        pool.Enqueue(tile);
+        // === AVANZAR AL SIGUIENTE PREFAB (alternancia perfecta) ===
+        currentPrefabIndex = (currentPrefabIndex + 1) % tilePrefabs.Length;
+
+        // Volver a encolar para reutilizar
+        pool.Enqueue(tileContainer);
     }
 
-    // Offset SIEMPRE en X (derecha) para 2D endless runner horizontal
-    Vector3 GetTileForwardOffset(GameObject tile)
+    Vector3 GetTileForwardOffset(GameObject tileContainer)
     {
-        Renderer r = tile.GetComponentInChildren<Renderer>(); // Funciona con SpriteRenderer
-        if (r == null) return Vector3.right * 10f; // Fallback
+        return Vector3.right * GetTileFullWidth(tileContainer);
+    }
 
-        float tileWidth = r.bounds.size.x;
-        return Vector3.right * tileWidth; // Avanza exactamente el ancho del tile
+    float GetTileFullWidth(GameObject tileContainer)
+    {
+        Renderer r = tileContainer.GetComponentInChildren<Renderer>();
+        return r != null ? r.bounds.size.x : 10f;
+    }
+
+    float GetTileHalfWidth(GameObject tileContainer)
+    {
+        return GetTileFullWidth(tileContainer) * 0.5f;
     }
 }
