@@ -32,11 +32,6 @@ public class TrenMovimiento : MonoBehaviour
             Time.deltaTime * velocidadVertical
         );
 
-        // Verificar si ya casi llegamos a targetPosition
-        if (Mathf.Abs(transform.position.y - targetPosition.y) < 0.01f)
-        {
-            animator.SetTrigger("TrenIdle"); // Volver a Idle
-        }
     }
 
     void IrPorArriba()
