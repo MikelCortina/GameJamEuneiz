@@ -404,6 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   decision: 0
   palancaSound: {fileID: 8300000, guid: 953b5d614ef655143808875c4e95d48e, type: 3}
+  palancaReturnSound: {fileID: 8300000, guid: ddb9c5813a16841418501f757b877a3f, type: 3}
   audioSource: {fileID: 300927787}
   canChangeTrack: 1
 --- !u!4 &1174037452
