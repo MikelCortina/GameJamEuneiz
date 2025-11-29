@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class TrenMovimiento : MonoBehaviour
@@ -8,6 +9,7 @@ public class TrenMovimiento : MonoBehaviour
     public GameObject actionPoint;
     public float distanciaEntrePuntos = 40f;
     public float alturaCambio = 3f;
+    public Animator animator;
 
     public float velocidadVertical = 5f; // Velocidad del Lerp vertical
 
@@ -29,11 +31,18 @@ public class TrenMovimiento : MonoBehaviour
             new Vector3(transform.position.x, targetPosition.y, transform.position.z),
             Time.deltaTime * velocidadVertical
         );
+
+        // Verificar si ya casi llegamos a targetPosition
+        if (Mathf.Abs(transform.position.y - targetPosition.y) < 0.01f)
+        {
+            animator.SetTrigger("TrenIdle"); // Volver a Idle
+        }
     }
 
     void IrPorArriba()
     {
         targetPosition = new Vector3(transform.position.x, transform.position.y + alturaCambio, transform.position.z);
+        animator.Play("ArribaTren", -1, 0f);
     }
 
     void IrPorAbajo()
@@ -45,6 +54,7 @@ public class TrenMovimiento : MonoBehaviour
     {
         targetPosition = new Vector3(transform.position.x, 0, transform.position.z);
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
