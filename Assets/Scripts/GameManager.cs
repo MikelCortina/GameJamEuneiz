@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
 
     public bool blocked;
 
+    private Gamepad gamepad;
+
     private void OnEnable()
     {
         if (inputActions == null)
@@ -56,10 +58,24 @@ public class GameManager : MonoBehaviour
         if (Arriba.triggered && canChangeTrack&&!blocked)
         {
             nuevaDecision = 1; // Siempre a arriba al pulsar arriba
+            var gamepad = Gamepad.current;
+            if (gamepad != null)
+            {
+                // Iniciar la vibración del gamepad
+                gamepad.SetMotorSpeeds(0.3f, 0.3f);
+                Invoke("StopVibration", 0.1f); // Detener la vibración después de 0.2 segundos 
+            }
         }
         else if (Abajo.triggered && canChangeTrack && !blocked)
         {
             nuevaDecision = 2; // Siempre a abajo al pulsar abajo
+            var gamepad = Gamepad.current;
+            if (gamepad != null)
+            {
+                // Iniciar la vibración del gamepad
+                gamepad.SetMotorSpeeds(0.3f, 0.3f);
+                Invoke("StopVibration", 0.1f); // Detener la vibración después de 0.2 segundos 
+            }
         }
         
 

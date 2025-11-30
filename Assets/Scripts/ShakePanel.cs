@@ -7,7 +7,12 @@ public class ShakePanel : MonoBehaviour
     public RectTransform panel;
     public float intensidad = 10f;
     public float duracion = 0.3f;
-
+    public Transform rayoTransform;
+    public Vector3 vectorRayo;
+    private void Start()
+    {
+        vectorRayo = rayoTransform.localPosition;
+    }
     public void Shake()
     {
         StartCoroutine(ShakeRoutine());
@@ -29,5 +34,9 @@ public class ShakePanel : MonoBehaviour
         }
 
         panel.anchoredPosition = origen;
+    }
+    public void ResetPosition()
+    { 
+        panel.anchoredPosition = vectorRayo;
     }
 }

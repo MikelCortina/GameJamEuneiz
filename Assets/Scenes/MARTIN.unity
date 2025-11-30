@@ -4502,7 +4502,7 @@ GameObject:
   - component: {fileID: 1825703141}
   - component: {fileID: 1825703143}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Rayo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4580,6 +4580,8 @@ MonoBehaviour:
   panel: {fileID: 1825703140}
   intensidad: 75
   duracion: 0.1
+  rayoTransform: {fileID: 1825703140}
+  vectorRayo: {x: 0, y: 0, z: 0}
 --- !u!1 &1844957793
 GameObject:
   m_ObjectHideFlags: 0

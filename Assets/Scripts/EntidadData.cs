@@ -11,7 +11,9 @@ public class EntidadData : MonoBehaviour
 
     public AnimationClip animacion;
 
-    public AudioClip sonido;
+    public AudioClip sonido1;
+    public AudioClip sonido2;
+
 
     public AudioSource audioSource;
 
@@ -25,7 +27,9 @@ public class EntidadData : MonoBehaviour
         //animacion
 
         //sonido
-        audioSource.clip = sonido;
+        audioSource.clip = sonido1;
+        audioSource.Play();
+        audioSource.clip = sonido2;
         audioSource.Play();
 
         Destroy(gameObject,5f);
