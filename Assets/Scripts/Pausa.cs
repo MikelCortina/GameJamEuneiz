@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Pausa : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Pausa : MonoBehaviour
     public InputActionAsset inputActions;
 
     private InputAction pausaAction;
+
+    private Gamepad gamepad;
 
     private void OnEnable()
     {
@@ -66,5 +69,13 @@ public class Pausa : MonoBehaviour
         // Oculta el menú de pausa
         canvas.enabled = false;
         pausado = false;
+    }
+
+    public void VolverAlMenu()
+    {
+        if(pausado)
+        {
+            SceneManager.LoadScene("MenuInicial");
+        }
     }
 }

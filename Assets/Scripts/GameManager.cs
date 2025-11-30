@@ -23,10 +23,13 @@ public class GameManager : MonoBehaviour
     public InputActionAsset inputActions;
     private InputAction Arriba;
     private InputAction Abajo;
+    private InputAction pausa;
+    private bool pausado = false;
 
     public bool blocked;
 
     private Gamepad gamepad;
+
 
     private void OnEnable()
     {
@@ -39,23 +42,32 @@ public class GameManager : MonoBehaviour
 
         Arriba = inputActions.FindAction("Player Controls/Up");
         Abajo = inputActions.FindAction("Player Controls/Down");
+        pausa = inputActions.FindAction("Player Controls/Pause");
+
 
         Arriba?.Enable();
         Abajo?.Enable();
+        pausa?.Enable();
     }
 
     private void OnDisable()
     {
         Arriba?.Disable();
         Abajo?.Disable();
+        pausa?.Disable();
     }
 
     void Update()
     {
         nuevaDecision = decision;
 
+        if (pausa.triggered)
+        {
+            pausado = true;
+        }
+
         // Solo cambia cuando se PRESIONA (triggered), no al mantener ni al soltar
-        if (Arriba.triggered && canChangeTrack&&!blocked)
+        if (Arriba.triggered && canChangeTrack&&!blocked && !pausado)
         {
             nuevaDecision = 1; // Siempre a arriba al pulsar arriba
             var gamepad = Gamepad.current;
@@ -66,7 +78,7 @@ public class GameManager : MonoBehaviour
                 Invoke("StopVibration", 0.1f); // Detener la vibración después de 0.2 segundos 
             }
         }
-        else if (Abajo.triggered && canChangeTrack && !blocked)
+        else if (Abajo.triggered && canChangeTrack && !blocked && !pausado)
         {
             nuevaDecision = 2; // Siempre a abajo al pulsar abajo
             var gamepad = Gamepad.current;
