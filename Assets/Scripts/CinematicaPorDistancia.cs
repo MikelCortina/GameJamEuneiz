@@ -20,7 +20,7 @@ public class ActivarCinematicaPorCamara : MonoBehaviour
        
         if (other.CompareTag("TriggerAnimacion"))
         {
-            letterbox.CerrarBandas(); // solo aquí se cierran
+           
             if (!yaActivado || !soloUnaVez)
             {
                 cinematica.Play();
