@@ -1,0 +1,764 @@
+fileFormatVersion: 2
+guid: 9b1257e633876874b897e2d853657f34
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4841901888883176861
+    second: nosotros_0
+  - first:
+      213: 7171377627618917217
+    second: nosotros_1
+  - first:
+      213: 4641248032159363505
+    second: nosotros_2
+  - first:
+      213: -98603811015656886
+    second: nosotros_3
+  - first:
+      213: 1125661182798689845
+    second: nosotros_4
+  - first:
+      213: 2615342866596667905
+    second: nosotros_5
+  - first:
+      213: -5837548397517591639
+    second: nosotros_6
+  - first:
+      213: 791239356937858036
+    second: nosotros_7
+  - first:
+      213: 8173100919780687146
+    second: nosotros_8
+  - first:
+      213: -97605599073334495
+    second: nosotros_9
+  - first:
+      213: -2437789220109061808
+    second: nosotros_10
+  - first:
+      213: -8024821773751898084
+    second: nosotros_11
+  - first:
+      213: -4024897149381129312
+    second: nosotros_12
+  - first:
+      213: 1825698528846418192
+    second: nosotros_13
+  - first:
+      213: -4145234665266616036
+    second: nosotros_14
+  - first:
+      213: 5684149027875192271
+    second: nosotros_15
+  - first:
+      213: 4547472610545809507
+    second: nosotros_16
+  - first:
+      213: 2383474369281081769
+    second: nosotros_17
+  - first:
+      213: -3034632160277364392
+    second: nosotros_18
+  - first:
+      213: -291055739047877389
+    second: nosotros_19
+  - first:
+      213: -5410551762462150276
+    second: nosotros_20
+  - first:
+      213: -3144049763024839011
+    second: nosotros_21
+  - first:
+      213: -8916188853231793917
+    second: nosotros_22
+  - first:
+      213: 5576710591520358536
+    second: nosotros_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nosotros_0
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 337
+        width: 216
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d95bc2c4d14e13340800000000000000
+      internalID: 4841901888883176861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_1
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 344
+        width: 245
+        height: 476
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16bb86ce4f9d58360800000000000000
+      internalID: 7171377627618917217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_2
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 349
+        width: 306
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b1f65fae76096040800000000000000
+      internalID: 4641248032159363505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_3
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 370
+        width: 224
+        height: 441
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4a79e63b50b1aef0800000000000000
+      internalID: -98603811015656886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_4
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 383
+        width: 236
+        height: 448
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 536792ab1e62f9f00800000000000000
+      internalID: 1125661182798689845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_5
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 305
+        width: 20
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 102a8510b709b4420800000000000000
+      internalID: 2615342866596667905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_6
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 346
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ab20de39acdcfea0800000000000000
+      internalID: -5837548397517591639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_7
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 307
+        width: 26
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fbe692c00c0bfa00800000000000000
+      internalID: 791239356937858036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_8
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 320
+        width: 30
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2d32fccbffac6170800000000000000
+      internalID: 8173100919780687146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_9
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 323
+        width: 8
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b052b893c35aef0800000000000000
+      internalID: -97605599073334495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_10
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 319
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0517f1ace9b3b2ed0800000000000000
+      internalID: -2437789220109061808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_11
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 322
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c10b2b53d1b12a090800000000000000
+      internalID: -8024821773751898084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_12
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 324
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0abc7a11e51b428c0800000000000000
+      internalID: -4024897149381129312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_13
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 281
+        width: 69
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01118d6932f265910800000000000000
+      internalID: 1825698528846418192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_14
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 281
+        width: 49
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19e52ac80b2976c0800000000000000
+      internalID: -4145234665266616036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_15
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 286
+        width: 42
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcdf1e8cc6722ee40800000000000000
+      internalID: 5684149027875192271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_16
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 284
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368b669ee3edb1f30800000000000000
+      internalID: 4547472610545809507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_17
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 286
+        width: 88
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a14f388f4dc31120800000000000000
+      internalID: 2383474369281081769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_18
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 315
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85101bed022d2e5d0800000000000000
+      internalID: -3034632160277364392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_19
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 299
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f46630f856f5fbf0800000000000000
+      internalID: -291055739047877389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_20
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 296
+        width: 63
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c71749f96dbd9e4b0800000000000000
+      internalID: -5410551762462150276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_21
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 303
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9ed0cef5671e54d0800000000000000
+      internalID: -3144049763024839011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_22
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 303
+        width: 22
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30942dc5a75534480800000000000000
+      internalID: -8916188853231793917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_23
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 304
+        width: 37
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 880cabe7cb4746d40800000000000000
+      internalID: 5576710591520358536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nosotros_24
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 1604
+        height: 835
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6b0c058b1ac5446b80c1462d26880a
+      internalID: -599198193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0919762fc2944214081241b3fea81053
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      nosotros_0: 4841901888883176861
+      nosotros_1: 7171377627618917217
+      nosotros_10: -2437789220109061808
+      nosotros_11: -8024821773751898084
+      nosotros_12: -4024897149381129312
+      nosotros_13: 1825698528846418192
+      nosotros_14: -4145234665266616036
+      nosotros_15: 5684149027875192271
+      nosotros_16: 4547472610545809507
+      nosotros_17: 2383474369281081769
+      nosotros_18: -3034632160277364392
+      nosotros_19: -291055739047877389
+      nosotros_2: 4641248032159363505
+      nosotros_20: -5410551762462150276
+      nosotros_21: -3144049763024839011
+      nosotros_22: -8916188853231793917
+      nosotros_23: 5576710591520358536
+      nosotros_24: -599198193
+      nosotros_3: -98603811015656886
+      nosotros_4: 1125661182798689845
+      nosotros_5: 2615342866596667905
+      nosotros_6: -5837548397517591639
+      nosotros_7: 791239356937858036
+      nosotros_8: 8173100919780687146
+      nosotros_9: -97605599073334495
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
