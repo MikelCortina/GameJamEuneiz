@@ -20,8 +20,11 @@ public class TrenMovimiento : MonoBehaviour
 
     [SerializeField] private float smoothTimeVertical = 0.25f; // Tiempo de suavizado vertical
     private float velocityY = 0f; // Necesario para SmoothDamp
+    public ShakePanel shakePanel;  // Asigna tu panel con efecto shake desde el inspector
 
- 
+    public Animator animator; // Asigna el Animator desde el inspector
+
+
 
     void Start()
     {
@@ -72,12 +75,20 @@ public class TrenMovimiento : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Detecta si el objeto que entra tiene el script Atropello o derivado
+        Atropello atropello = collision.GetComponent<Atropello>();
+        if (atropello != null)
+        {
+            shakePanel.Shake();
+            animator.Play("SustoClip");
+        }
+
+
         if (collision.CompareTag("ResetPoint"))
         {
             StartCoroutine(BlockInputs());
             Debug.Log("RESET");
             gameManager.canChangeTrack = true;
-
 
             gameManager.nuevaDecision = 0;
             if (gameManager.decisionParaCuestas == 1)
@@ -91,9 +102,6 @@ public class TrenMovimiento : MonoBehaviour
                 gameManager.audioSource.PlayOneShot(gameManager.palancaAbajoMedioSound);
             }
 
-
-
-            //resetPoint.transform.position += new Vector3(distanciaEntrePuntos, 0, 0);
             IrPorElMedio();
         }
 
@@ -101,7 +109,6 @@ public class TrenMovimiento : MonoBehaviour
         {
             Debug.Log("ACCION");
             spawnManager.Randomizar();
-            //actionPoint.transform.position += new Vector3(distanciaEntrePuntos, 0, 0);
 
             if (gameManager.decision == 1)
             {
@@ -117,11 +124,7 @@ public class TrenMovimiento : MonoBehaviour
             {
                 Debug.Log("Fin del juego)");
             }
-
-
         }
-      
-
     }
 
     public IEnumerator BlockInputs()

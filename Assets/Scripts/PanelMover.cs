@@ -14,6 +14,8 @@ public class PanelMover : MonoBehaviour
     private float tiempoTranscurrido = 0f;
     private bool moviendo = false;
 
+    public IntroLetterbox letterbox; // referencia necesaria
+
 
     private void Start()
     {
@@ -35,5 +37,10 @@ public class PanelMover : MonoBehaviour
         // Detenemos cuando termina
         if (t >= 1f)
             moviendo = false;
+
+        if (moviendo == false)
+        {
+            letterbox.CerrarBandas(); // Llama al método para abrir las bandas negras
+        }
     }
 }
