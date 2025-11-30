@@ -7,6 +7,8 @@ public class ActivarCinematicaPorCamara : MonoBehaviour
     public bool soloUnaVez = true;
     public IntroLetterbox letterbox; // referencia necesaria
 
+    public MovimientoDerecha vagones;
+
     private bool yaActivado = false;
     
 
@@ -20,7 +22,7 @@ public class ActivarCinematicaPorCamara : MonoBehaviour
        
         if (other.CompareTag("TriggerAnimacion"))
         {
-           
+            vagones.mover=false;
             if (!yaActivado || !soloUnaVez)
             {
                 cinematica.Play();

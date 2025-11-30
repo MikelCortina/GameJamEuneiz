@@ -21,10 +21,12 @@ public class TrenMovimiento : MonoBehaviour
 
     [SerializeField] private float smoothTimeVertical = 0.25f; // Tiempo de suavizado vertical
     private float velocityY = 0f; // Necesario para SmoothDamp
+    
     public ShakePanel shakePanel;  // Asigna tu panel con efecto shake desde el inspector
 
     public Animator animator; // Asigna el Animator desde el inspector
 
+ 
 
 
     void Start()
@@ -84,14 +86,17 @@ public class TrenMovimiento : MonoBehaviour
             animator.Play("SustoClip");
         }
 
-
         if (collision.CompareTag("ResetPoint"))
         {
             StartCoroutine(BlockInputs());
             Debug.Log("RESET");
             gameManager.canChangeTrack = true;
 
+            // Reseteamos la decisión correctamente
             gameManager.nuevaDecision = 0;
+            gameManager.decision = 0; // <- Esto es clave
+
+            // Animación y sonido según el estado previo
             if (gameManager.decisionParaCuestas == 1)
             {
                 gameManager.animator.Play("PalancaArribaMedio");
