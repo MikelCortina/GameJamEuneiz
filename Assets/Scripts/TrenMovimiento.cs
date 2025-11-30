@@ -87,8 +87,9 @@ public class TrenMovimiento : MonoBehaviour
 
         if (collision.CompareTag("ResetPoint"))
         {
-            StartCoroutine(BlockInputs());
             Debug.Log("RESET");
+            shakePanel.ResetPosition();
+            StartCoroutine(BlockInputs());
             gameManager.canChangeTrack = true;
 
             gameManager.nuevaDecision = 0;
@@ -123,6 +124,7 @@ public class TrenMovimiento : MonoBehaviour
             }
             else if (gameManager.decision == 0)
             {
+                IrPorElMedio();
                 Debug.Log("Fin del juego)");
                 StartCoroutine(DelayDeathEffect());
             }

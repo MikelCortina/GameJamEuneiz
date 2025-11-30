@@ -3814,7 +3814,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1740956835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4015,6 +4015,13 @@ MonoBehaviour:
   distanciaX: 2
   delayY: 0.4
   smoothY: 8
+  vagonArriba1: {fileID: 0}
+  vagonArriba2: {fileID: 0}
+  vagonArriba3: {fileID: 0}
+  vagonAbajo1: {fileID: 0}
+  vagonAbajo2: {fileID: 0}
+  vagonAbajo3: {fileID: 0}
+  spriteParaIdle: {fileID: 0}
 --- !u!212 &1782198873
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4091,7 +4098,7 @@ GameObject:
   - component: {fileID: 1825703141}
   - component: {fileID: 1825703143}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Rayo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4169,6 +4176,8 @@ MonoBehaviour:
   panel: {fileID: 1825703140}
   intensidad: 75
   duracion: 0.1
+  rayoTransform: {fileID: 1825703140}
+  vectorRayo: {x: 0, y: 0, z: 0}
 --- !u!1 &1844957793
 GameObject:
   m_ObjectHideFlags: 0
