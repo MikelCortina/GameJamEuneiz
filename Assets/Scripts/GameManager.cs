@@ -98,4 +98,12 @@ public class GameManager : MonoBehaviour
             decisionParaCuestas = decision;
         }
     }
+    private void StopVibration()
+    {
+        var pad = Gamepad.current;
+        if (pad != null)
+        {
+            pad.SetMotorSpeeds(0f, 0f);
+        }
+    }
 }
