@@ -22,6 +22,7 @@ TagManager:
   - AbajoArriba2
   - AbajoArriba3
   - AbajoArriba4
+  - TriggerAnimacion
   layers:
   - Default
   - TransparentFX

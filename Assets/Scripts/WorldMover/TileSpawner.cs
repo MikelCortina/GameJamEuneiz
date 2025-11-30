@@ -3,130 +3,118 @@ using UnityEngine;
 
 public class TileSpawner2D : MonoBehaviour
 {
-    [Header("Pool Tiles")]
-    public GameObject[] tilePrefabs;        // Ej: [0] = TileA, [1] = TileB
-    public int poolSize = 20;
+    [Header("Prefabs a usar como tile")]
+    public GameObject[] tilePrefabs;
+
+    [Header("Tamaño del pool por tipo de tile")]
+    public int poolSizePerPrefab = 5;
 
     [Header("Spawn Settings")]
     public Transform cam;
     public float distanceToSpawn = 15f;
-
-    [Header("Punto de inicio en el mundo")]
     public float startXPosition = 0f;
 
-    private Queue<GameObject> pool = new Queue<GameObject>();
+    private List<Queue<GameObject>> tilePools;          // Un pool por prefab
     private GameObject lastTile;
-    private int currentPrefabIndex = 0;          // Este controla la alternancia limpia
-    private float lastTileRightX = 0f;
+    private float lastTileRightX;
+    private int nextTileIndex = 0;                      // Alternancia limpia
 
     void Start()
     {
         if (cam == null) cam = Camera.main.transform;
-        if (tilePrefabs == null || tilePrefabs.Length == 0)
+        if (tilePrefabs.Length == 0)
         {
-            Debug.LogError("No hay tilePrefabs asignados!");
+            Debug.LogError("No hay tilePrefabs asignados al spawner");
             return;
         }
 
-        // === CREAR POOL LIMPIO ===
-        for (int i = 0; i < poolSize; i++)
-        {
-            // Usamos siempre el prefab vacío o uno base si quieres, pero mejor uno "container"
-            GameObject container = new GameObject("PooledTileContainer");
-            container.SetActive(false);
-            pool.Enqueue(container);
-        }
-
-        transform.position = new Vector3(startXPosition, transform.position.y, transform.position.z);
+        CreatePools();
         lastTileRightX = startXPosition;
 
-        SpawnInitialTile();
+        // Evita popping cargando varios tiles iniciales
+        for (int i = 0; i < 8; i++) SpawnTile();
     }
 
     void Update()
     {
-        if (lastTile == null) return;
+        if (cam == null) return;
 
-        float distanceToRightEdge = cam.position.x - lastTileRightX;
-        if (distanceToRightEdge > -distanceToSpawn)
+        // Si la cámara está a menos de X unidades del borde → generar otro tile
+        if (lastTileRightX - cam.position.x < distanceToSpawn)
         {
             SpawnTile();
         }
     }
 
-    void SpawnInitialTile()
+    void CreatePools()
     {
-        SpawnTile();
+        tilePools = new List<Queue<GameObject>>();
+
+        foreach (GameObject prefab in tilePrefabs)
+        {
+            Queue<GameObject> pool = new Queue<GameObject>();
+
+            for (int i = 0; i < poolSizePerPrefab; i++)
+            {
+                GameObject obj = Instantiate(prefab);
+                obj.SetActive(false);
+                pool.Enqueue(obj);
+            }
+
+            tilePools.Add(pool);
+        }
     }
 
     void SpawnTile()
     {
-        if (pool.Count == 0)
-        {
-            Debug.LogWarning("Pool vacío! Aumenta poolSize.");
-            return;
-        }
+        GameObject tile = GetTileFromPool(nextTileIndex);
+        if (tile == null) return;
 
-        GameObject tileContainer = pool.Dequeue();
-        tileContainer.SetActive(true);
+        tile.SetActive(true);
 
-        // === LIMPIAR HIJOS ANTERIORES (importante para evitar clones/solapes) ===
-        foreach (Transform child in tileContainer.transform)
-        {
-            if (Application.isPlaying)
-                Destroy(child.gameObject);
-            else
-                DestroyImmediate(child.gameObject);
-        }
+        float tileHalf = GetHalfWidth(tile);
 
-        // === INSTANCIAR EL NUEVO PREFAB DENTRO DEL CONTENEDOR ===
-        GameObject newTile = Instantiate(tilePrefabs[currentPrefabIndex], tileContainer.transform);
-        newTile.transform.localPosition = Vector3.zero;
-        newTile.transform.localRotation = Quaternion.identity;
-
-        // === POSICIONAR EL CONTENEDOR ===
+        // primer tile
         if (lastTile == null)
         {
-            // Primer tile
-            float halfWidth = GetTileHalfWidth(newTile);
-
-            // Instanciamos o activamos el tile dentro del contenedor
-            tileContainer.transform.position = new Vector3(
-                startXPosition + halfWidth,
-                transform.position.y,
-                0f
-            );
+            tile.transform.position = new Vector3(startXPosition + tileHalf, transform.position.y, 0f);
         }
         else
         {
-            Vector3 offset = GetTileForwardOffset(lastTile);
-            tileContainer.transform.position = lastTile.transform.position + offset;
+            float lastWidth = GetFullWidth(lastTile);
+            tile.transform.position = lastTile.transform.position + Vector3.right * lastWidth;
         }
 
-        // Actualizar borde derecho
-        lastTileRightX = tileContainer.transform.position.x + GetTileHalfWidth(newTile);
-        lastTile = tileContainer;
+        lastTile = tile;
+        lastTileRightX = tile.transform.position.x + tileHalf;
 
-        // === AVANZAR AL SIGUIENTE PREFAB (alternancia perfecta) ===
-        currentPrefabIndex = (currentPrefabIndex + 1) % tilePrefabs.Length;
-
-        // Volver a encolar para reutilizar
-        pool.Enqueue(tileContainer);
+        nextTileIndex = (nextTileIndex + 1) % tilePrefabs.Length;
     }
 
-    Vector3 GetTileForwardOffset(GameObject tileContainer)
+    GameObject GetTileFromPool(int prefabIndex)
     {
-        return Vector3.right * GetTileFullWidth(tileContainer);
+        Queue<GameObject> pool = tilePools[prefabIndex];
+
+        // Si se agota el pool, se expande automáticamente sin romper SOLID
+        if (pool.Count == 0)
+        {
+            Debug.LogWarning("Pool agotado, expandiendo para evitar popping");
+            GameObject extra = Instantiate(tilePrefabs[prefabIndex]);
+            return extra;
+        }
+
+        GameObject tile = pool.Dequeue();
+
+        // Al devolverlo se repondrá al final
+        pool.Enqueue(tile);
+        return tile;
     }
 
-    float GetTileFullWidth(GameObject tileContainer)
+    float GetFullWidth(GameObject tile)
     {
-        Renderer r = tileContainer.GetComponentInChildren<Renderer>();
-        return r != null ? r.bounds.size.x : 10f;
+        Renderer r = tile.GetComponentInChildren<Renderer>();
+        return r ? r.bounds.size.x : 10f;      // fallback seguro
     }
 
-    float GetTileHalfWidth(GameObject tileContainer)
-    {
-        return GetTileFullWidth(tileContainer) * 0.5f;
-    }
+    float GetHalfWidth(GameObject tile) => GetFullWidth(tile) * 0.5f;
 }
