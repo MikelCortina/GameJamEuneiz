@@ -154,9 +154,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Perro
   estaVivo: 1
   animacion: {fileID: 0}
-  sonido1: {fileID: 0}
-  sonido2: {fileID: 0}
-  audioSource: {fileID: 0}
+  sonido1: {fileID: 8300000, guid: 4cdf00cc52300bc459314adce1a0db39, type: 3}
+  sonido2: {fileID: 8300000, guid: 4cdf00cc52300bc459314adce1a0db39, type: 3}
+  audioSource: {fileID: 6392947494227079271}
   descripcion: 
 --- !u!114 &-3983129123268469750
 MonoBehaviour:
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac94585b6c844a541bc6be3b92b5efbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Atropello
-  entidadData: {fileID: 0}
+  entidadData: {fileID: -6635224884452657240}
 --- !u!82 &6392947494227079271
 AudioSource:
   m_ObjectHideFlags: 0

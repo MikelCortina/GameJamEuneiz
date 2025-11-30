@@ -109,7 +109,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Adulto
   estaVivo: 1
   animacion: {fileID: 0}
-  sonido: {fileID: 8300000, guid: 4cdf00cc52300bc459314adce1a0db39, type: 3}
+  sonido1: {fileID: 8300000, guid: 4cdf00cc52300bc459314adce1a0db39, type: 3}
+  sonido2: {fileID: 8300000, guid: 4cdf00cc52300bc459314adce1a0db39, type: 3}
   audioSource: {fileID: 6392947494227079271}
   descripcion: 
 --- !u!61 &3206807530669529928
