@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 7246460547695563366}
   - component: {fileID: 513357527295148672}
-  - component: {fileID: -162933350266588152}
-  - component: {fileID: 1177601211432461703}
-  - component: {fileID: 6114049364119184648}
-  - component: {fileID: 6936172206107982150}
+  - component: {fileID: 1038003832249657811}
+  - component: {fileID: 3206807530669529928}
+  - component: {fileID: -3983129123268469750}
+  - component: {fileID: 6392947494227079271}
+  - component: {fileID: 6035807382480501607}
   m_Layer: 0
-  m_Name: Paja
+  m_Name: MonaLisa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,8 +84,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.5999999, g: 0.57166296, b: 0.13924521, a: 1}
+  m_Sprite: {fileID: -1081787769820453926, guid: 2d183d033fb2e2641886d2f565b861e7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -94,7 +95,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-162933350266588152
+--- !u!114 &1038003832249657811
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,16 +104,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 882814136391798567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58271ca7548aabe48bb9e7b369dd1d15, type: 3}
+  m_Script: {fileID: 11500000, guid: 005b99dabf7b2494abb5b620f7f2929f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Paja
+  m_EditorClassIdentifier: Assembly-CSharp::Adulto
   estaVivo: 1
-  imagen: {fileID: 0}
   animacion: {fileID: 0}
-  sonido: {fileID: 8300000, guid: 96fa69a680f2e704894413cc54b8912c, type: 3}
-  audioSource: {fileID: 6936172206107982150}
+  sonido: {fileID: 8300000, guid: 4cdf00cc52300bc459314adce1a0db39, type: 3}
+  audioSource: {fileID: 6392947494227079271}
   descripcion: 
---- !u!61 &1177601211432461703
+--- !u!61 &3206807530669529928
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,7 +150,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.86, y: 1.73}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -158,7 +158,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6114049364119184648
+--- !u!114 &-3983129123268469750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,8 +170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac94585b6c844a541bc6be3b92b5efbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Atropello
-  entidadData: {fileID: -162933350266588152}
---- !u!82 &6936172206107982150
+  entidadData: {fileID: 1038003832249657811}
+--- !u!82 &6392947494227079271
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,3 +268,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6035807382480501607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882814136391798567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 698c993fc9da3ea46a57955d2915739c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MonaLisa
+  estaVivo: 1
+  animacion: {fileID: 0}
+  sonido: {fileID: 0}
+  audioSource: {fileID: 0}
+  descripcion: 

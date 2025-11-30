@@ -9,8 +9,6 @@ public class EntidadData : MonoBehaviour
 {
     public bool estaVivo = true;
 
-    public Sprite imagen;
-
     public AnimationClip animacion;
 
     public AudioClip sonido;

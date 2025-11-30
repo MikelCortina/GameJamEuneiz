@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7246460547695563366}
   - component: {fileID: 513357527295148672}
-  - component: {fileID: 5539767254619063078}
-  - component: {fileID: 1286872154377955349}
-  - component: {fileID: -8070296489940001134}
-  - component: {fileID: -1412136853365241585}
+  - component: {fileID: 3206807530669529928}
+  - component: {fileID: -8239273263251718139}
+  - component: {fileID: -3983129123268469750}
+  - component: {fileID: 6392947494227079271}
   m_Layer: 0
-  m_Name: Bebe
+  m_Name: Gato
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,13 +29,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882814136391798567}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38751557, w: 0.9218632}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45.6}
 --- !u!212 &513357527295148672
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -83,8 +83,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.7980838, b: 0.57169807, a: 1}
+  m_Sprite: {fileID: -5155329453913746789, guid: 335d1c0f18b3ba848a5be144a30d502d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -94,25 +94,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5539767254619063078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882814136391798567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1bb7d54d2c3b524c9177eb303294f55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Bebe
-  estaVivo: 1
-  imagen: {fileID: 0}
-  animacion: {fileID: 0}
-  sonido: {fileID: 8300000, guid: 4cdf00cc52300bc459314adce1a0db39, type: 3}
-  audioSource: {fileID: -1412136853365241585}
-  descripcion: 
---- !u!61 &1286872154377955349
+--- !u!61 &3206807530669529928
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,7 +132,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.52, y: 1.75}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -158,7 +140,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-8070296489940001134
+--- !u!114 &-8239273263251718139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882814136391798567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18187aaed4d886e4e9d61af9e9faf45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Gato
+  estaVivo: 1
+  animacion: {fileID: 0}
+  sonido: {fileID: 0}
+  audioSource: {fileID: 0}
+  descripcion: 
+--- !u!114 &-3983129123268469750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,8 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac94585b6c844a541bc6be3b92b5efbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Atropello
-  entidadData: {fileID: 5539767254619063078}
---- !u!82 &-1412136853365241585
+  entidadData: {fileID: 0}
+--- !u!82 &6392947494227079271
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
