@@ -41,6 +41,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 159222755942375603}
     m_Modifications:
+    - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+      propertyPath: particula
+      value: 
+      objectReference: {fileID: 1556281284567466481}
     - target: {fileID: 882814136391798567, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: m_Name
       value: Abuela
@@ -90,6 +94,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+--- !u!198 &1556281284567466481 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1910731005592254286, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+  m_PrefabInstance: {fileID: 1089099445139486399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7750091693384000729 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7246460547695563366, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}

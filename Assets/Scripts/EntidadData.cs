@@ -13,7 +13,7 @@ public class EntidadData : MonoBehaviour
 
     public AudioClip sonido1;
     public AudioClip sonido2;
-
+    public ParticleSystem particula;
 
     public AudioSource audioSource;
 
@@ -31,6 +31,9 @@ public class EntidadData : MonoBehaviour
         audioSource.Play();
         audioSource.clip = sonido2;
         audioSource.Play();
+        //Particula
+        Debug.Log("PeioParticula");
+        particula.Play();
 
         Destroy(gameObject,5f);
     }

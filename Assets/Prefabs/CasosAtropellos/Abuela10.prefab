@@ -49,6 +49,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 159222755942375603}
     m_Modifications:
+    - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+      propertyPath: particula
+      value: 
+      objectReference: {fileID: 1779460775405018731}
     - target: {fileID: 882814136391798567, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: m_Name
       value: Abuela (2)
@@ -98,6 +102,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+--- !u!198 &1779460775405018731 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1910731005592254286, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+  m_PrefabInstance: {fileID: 159224248716978469}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7396376124804152131 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7246460547695563366, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
@@ -111,6 +120,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 159222755942375603}
     m_Modifications:
+    - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+      propertyPath: particula
+      value: 
+      objectReference: {fileID: 1832813916159389086}
     - target: {fileID: 882814136391798567, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: m_Name
       value: Abuela (6)
@@ -160,6 +173,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+--- !u!198 &1832813916159389086 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1910731005592254286, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+  m_PrefabInstance: {fileID: 282373493225691856}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7456738650902153398 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7246460547695563366, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
@@ -173,6 +191,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 159222755942375603}
     m_Modifications:
+    - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+      propertyPath: particula
+      value: 
+      objectReference: {fileID: 1607084780615146035}
     - target: {fileID: 882814136391798567, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: m_Name
       value: Abuela (8)
@@ -222,6 +244,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+--- !u!198 &1607084780615146035 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1910731005592254286, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+  m_PrefabInstance: {fileID: 921483850396609917}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7519144233175940891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7246460547695563366, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
@@ -235,6 +262,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 159222755942375603}
     m_Modifications:
+    - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+      propertyPath: particula
+      value: 
+      objectReference: {fileID: 1556281284567466481}
     - target: {fileID: 882814136391798567, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: m_Name
       value: Abuela
@@ -284,6 +315,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+--- !u!198 &1556281284567466481 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1910731005592254286, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+  m_PrefabInstance: {fileID: 1089099445139486399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7750091693384000729 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7246460547695563366, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
@@ -297,6 +333,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 159222755942375603}
     m_Modifications:
+    - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+      propertyPath: particula
+      value: 
+      objectReference: {fileID: 464344713610264581}
     - target: {fileID: 882814136391798567, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: m_Name
       value: Abuela (5)
@@ -346,6 +386,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+--- !u!198 &464344713610264581 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1910731005592254286, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+  m_PrefabInstance: {fileID: 2086829876873312075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8675465390634198317 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7246460547695563366, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
@@ -359,6 +404,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 159222755942375603}
     m_Modifications:
+    - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+      propertyPath: particula
+      value: 
+      objectReference: {fileID: 338816948569090733}
     - target: {fileID: 882814136391798567, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: m_Name
       value: Abuela (7)
@@ -408,6 +457,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+--- !u!198 &338816948569090733 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1910731005592254286, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+  m_PrefabInstance: {fileID: 2177489877978914275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8838146010664914821 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7246460547695563366, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
@@ -421,6 +475,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 159222755942375603}
     m_Modifications:
+    - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+      propertyPath: particula
+      value: 
+      objectReference: {fileID: 4235730652318312846}
     - target: {fileID: 882814136391798567, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: m_Name
       value: Abuela (9)
@@ -470,6 +528,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+--- !u!198 &4235730652318312846 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1910731005592254286, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+  m_PrefabInstance: {fileID: 2327254005267046080}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4961990794388622502 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7246460547695563366, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
@@ -483,6 +546,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 159222755942375603}
     m_Modifications:
+    - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+      propertyPath: particula
+      value: 
+      objectReference: {fileID: 4053570019298294736}
     - target: {fileID: 882814136391798567, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: m_Name
       value: Abuela (3)
@@ -532,6 +599,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+--- !u!198 &4053570019298294736 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1910731005592254286, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+  m_PrefabInstance: {fileID: 2505527297286868126}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5068223814233677560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7246460547695563366, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
@@ -545,6 +617,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 159222755942375603}
     m_Modifications:
+    - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+      propertyPath: particula
+      value: 
+      objectReference: {fileID: 4977039461776422612}
     - target: {fileID: 882814136391798567, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: m_Name
       value: Abuela (1)
@@ -599,6 +675,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7246460547695563366, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
   m_PrefabInstance: {fileID: 6887614324906279322}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &4977039461776422612 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1910731005592254286, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+  m_PrefabInstance: {fileID: 6887614324906279322}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9124876089094009541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -607,6 +688,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 159222755942375603}
     m_Modifications:
+    - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+      propertyPath: particula
+      value: 
+      objectReference: {fileID: 7216549791667438987}
     - target: {fileID: 882814136391798567, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: m_Name
       value: Abuela (4)
@@ -659,5 +744,10 @@ PrefabInstance:
 --- !u!4 &1887724080122142883 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7246460547695563366, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+  m_PrefabInstance: {fileID: 9124876089094009541}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7216549791667438987 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1910731005592254286, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
   m_PrefabInstance: {fileID: 9124876089094009541}
   m_PrefabAsset: {fileID: 0}

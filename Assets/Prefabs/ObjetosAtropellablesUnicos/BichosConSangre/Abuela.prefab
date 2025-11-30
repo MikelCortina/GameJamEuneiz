@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7246460547695563366}
   - component: {fileID: 513357527295148672}
-  - component: {fileID: 3206807530669529928}
-  - component: {fileID: -4228900357247285394}
-  - component: {fileID: -3983129123268469750}
-  - component: {fileID: 6392947494227079271}
+  - component: {fileID: -4954538007600146821}
+  - component: {fileID: 5860150948449592704}
+  - component: {fileID: -2347426527064188608}
+  - component: {fileID: 4313407201819683991}
   m_Layer: 0
-  m_Name: Oveja
+  m_Name: Abuela
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,9 +31,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 76823052793977351}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &513357527295148672
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 6803641503067638362, guid: 593cbf95d11227a46a1bf351faf3cd88, type: 3}
+  m_Sprite: {fileID: 6067716708122326717, guid: aab9047d72ba3b340897e97b807804b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -94,7 +95,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3206807530669529928
+--- !u!114 &-4954538007600146821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882814136391798567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdcc3f2a1e6e4d04db44cb23a1054e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Abuela
+  estaVivo: 1
+  animacion: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
+  particula: {fileID: 6281108090359830118, guid: f068cfdd4d77c5b46b2a5205b6e84d34, type: 3}
+  audioSource: {fileID: 4313407201819683991}
+  descripcion: 
+--- !u!61 &5860150948449592704
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,7 +152,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.13, y: 1.09}
+    oldSize: {x: 1.02, y: 1.01}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -140,24 +160,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-4228900357247285394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882814136391798567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13e097ed2d23cbc4f9b403986b7cf6fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Oveja
-  estaVivo: 1
-  animacion: {fileID: 0}
-  sonido: {fileID: 0}
-  audioSource: {fileID: 0}
-  descripcion: 
---- !u!114 &-3983129123268469750
+--- !u!114 &-2347426527064188608
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,8 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac94585b6c844a541bc6be3b92b5efbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Atropello
-  entidadData: {fileID: 0}
---- !u!82 &6392947494227079271
+  entidadData: {fileID: -4954538007600146821}
+--- !u!82 &4313407201819683991
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,3 +270,65 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &5597619462600417576
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7246460547695563366}
+    m_Modifications:
+    - target: {fileID: 3159288005081761900, guid: f068cfdd4d77c5b46b2a5205b6e84d34, type: 3}
+      propertyPath: m_Name
+      value: BloodSplash
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529948749570571055, guid: f068cfdd4d77c5b46b2a5205b6e84d34, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529948749570571055, guid: f068cfdd4d77c5b46b2a5205b6e84d34, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529948749570571055, guid: f068cfdd4d77c5b46b2a5205b6e84d34, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529948749570571055, guid: f068cfdd4d77c5b46b2a5205b6e84d34, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529948749570571055, guid: f068cfdd4d77c5b46b2a5205b6e84d34, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529948749570571055, guid: f068cfdd4d77c5b46b2a5205b6e84d34, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529948749570571055, guid: f068cfdd4d77c5b46b2a5205b6e84d34, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529948749570571055, guid: f068cfdd4d77c5b46b2a5205b6e84d34, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529948749570571055, guid: f068cfdd4d77c5b46b2a5205b6e84d34, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5529948749570571055, guid: f068cfdd4d77c5b46b2a5205b6e84d34, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f068cfdd4d77c5b46b2a5205b6e84d34, type: 3}
+--- !u!4 &76823052793977351 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5529948749570571055, guid: f068cfdd4d77c5b46b2a5205b6e84d34, type: 3}
+  m_PrefabInstance: {fileID: 5597619462600417576}
+  m_PrefabAsset: {fileID: 0}

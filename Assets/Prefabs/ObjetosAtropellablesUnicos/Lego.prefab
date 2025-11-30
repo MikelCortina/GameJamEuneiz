@@ -156,6 +156,7 @@ MonoBehaviour:
   animacion: {fileID: 0}
   sonido1: {fileID: 0}
   sonido2: {fileID: 0}
+  particula: {fileID: 0}
   audioSource: {fileID: 0}
   descripcion: 
 --- !u!114 &-3983129123268469750
