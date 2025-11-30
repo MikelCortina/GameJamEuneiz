@@ -89,7 +89,6 @@ public class TrenMovimiento : MonoBehaviour
         if (collision.CompareTag("ResetPoint"))
         {
             Debug.Log("RESET");
-            shakePanel.ResetPosition();
             StartCoroutine(BlockInputs());
             gameManager.canChangeTrack = true;
 

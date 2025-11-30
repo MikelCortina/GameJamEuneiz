@@ -7,12 +7,14 @@ public class ShakePanel : MonoBehaviour
     public RectTransform panel;
     public float intensidad = 10f;
     public float duracion = 0.3f;
-    public Transform rayoTransform;
-    public Vector3 vectorRayo;
+
+    private Vector2 posicionInicial;
+
     private void Start()
     {
-        vectorRayo = rayoTransform.localPosition;
+        posicionInicial = panel.anchoredPosition;   // Guardamos su posición original real
     }
+
     public void Shake()
     {
         StartCoroutine(ShakeRoutine());
@@ -20,23 +22,19 @@ public class ShakePanel : MonoBehaviour
 
     IEnumerator ShakeRoutine()
     {
-        Vector3 origen = panel.anchoredPosition;
         float tiempo = 0f;
 
         while (tiempo < duracion)
         {
             float x = Random.Range(-1f, 1f) * intensidad;
             float y = Random.Range(-1f, 1f) * intensidad;
-            panel.anchoredPosition = origen + new Vector3(x, y, 0);
+            panel.anchoredPosition = posicionInicial + new Vector2(x, y);
 
             tiempo += Time.deltaTime;
             yield return null;
         }
 
-        panel.anchoredPosition = origen;
-    }
-    public void ResetPosition()
-    { 
-        panel.anchoredPosition = vectorRayo;
+        // Al final vuelve exactamente donde estaba
+        panel.anchoredPosition = posicionInicial;
     }
 }
