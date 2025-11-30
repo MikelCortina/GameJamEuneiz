@@ -11,7 +11,9 @@ public class EntidadData : MonoBehaviour
 
     public AnimationClip animacion;
 
-    public AudioClip sonido;
+    public AudioClip sonido1;
+    public AudioClip sonido2;
+
 
     public AudioSource audioSource;
 
