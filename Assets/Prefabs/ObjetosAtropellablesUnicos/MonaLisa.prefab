@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7246460547695563366}
   - component: {fileID: 513357527295148672}
-  - component: {fileID: 1038003832249657811}
   - component: {fileID: 3206807530669529928}
+  - component: {fileID: 5316049451387008530}
   - component: {fileID: -3983129123268469750}
   - component: {fileID: 6392947494227079271}
   - component: {fileID: 6035807382480501607}
@@ -95,23 +95,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1038003832249657811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882814136391798567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 005b99dabf7b2494abb5b620f7f2929f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Adulto
-  estaVivo: 1
-  animacion: {fileID: 0}
-  sonido: {fileID: 8300000, guid: 4cdf00cc52300bc459314adce1a0db39, type: 3}
-  audioSource: {fileID: 6392947494227079271}
-  descripcion: 
 --- !u!61 &3206807530669529928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -158,6 +141,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5316049451387008530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882814136391798567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 698c993fc9da3ea46a57955d2915739c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MonaLisa
+  estaVivo: 1
+  animacion: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
+  audioSource: {fileID: 0}
+  descripcion: 
 --- !u!114 &-3983129123268469750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac94585b6c844a541bc6be3b92b5efbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Atropello
-  entidadData: {fileID: 1038003832249657811}
+  entidadData: {fileID: 0}
 --- !u!82 &6392947494227079271
 AudioSource:
   m_ObjectHideFlags: 0
@@ -282,6 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MonaLisa
   estaVivo: 1
   animacion: {fileID: 0}
-  sonido: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
   audioSource: {fileID: 0}
   descripcion: 

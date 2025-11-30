@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7246460547695563366}
   - component: {fileID: 513357527295148672}
-  - component: {fileID: 6483177760052373207}
   - component: {fileID: 3206807530669529928}
+  - component: {fileID: 194739858553860635}
   - component: {fileID: -3983129123268469750}
   - component: {fileID: 6392947494227079271}
   m_Layer: 0
@@ -94,23 +94,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6483177760052373207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882814136391798567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e1b94492620a3242ad28f756f1809cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pastel
-  estaVivo: 1
-  animacion: {fileID: 0}
-  sonido: {fileID: 0}
-  audioSource: {fileID: 0}
-  descripcion: 
 --- !u!61 &3206807530669529928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -157,6 +140,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &194739858553860635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882814136391798567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a137ee6224164804a877977571eacb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Cabra
+  estaVivo: 1
+  animacion: {fileID: 0}
+  sonido1: {fileID: 0}
+  sonido2: {fileID: 0}
+  audioSource: {fileID: 0}
+  descripcion: 
 --- !u!114 &-3983129123268469750
 MonoBehaviour:
   m_ObjectHideFlags: 0
