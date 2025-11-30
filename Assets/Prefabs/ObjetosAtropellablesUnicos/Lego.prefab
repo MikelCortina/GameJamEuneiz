@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7246460547695563366}
   - component: {fileID: 513357527295148672}
-  - component: {fileID: -4954538007600146821}
-  - component: {fileID: 5860150948449592704}
-  - component: {fileID: -2347426527064188608}
-  - component: {fileID: 4313407201819683991}
+  - component: {fileID: 6483177760052373207}
+  - component: {fileID: 3206807530669529928}
+  - component: {fileID: -3983129123268469750}
+  - component: {fileID: 6392947494227079271}
   m_Layer: 0
-  m_Name: Abuela
+  m_Name: Lego
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 6067716708122326717, guid: aab9047d72ba3b340897e97b807804b4, type: 3}
+  m_Sprite: {fileID: -449720448897733266, guid: 7380bf8fa29ae3a408c8c49b8a35205f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -94,7 +94,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-4954538007600146821
+--- !u!114 &6483177760052373207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,15 +103,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 882814136391798567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdcc3f2a1e6e4d04db44cb23a1054e74, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e1b94492620a3242ad28f756f1809cb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Abuela
+  m_EditorClassIdentifier: Assembly-CSharp::Pastel
   estaVivo: 1
   animacion: {fileID: 0}
-  sonido: {fileID: 8300000, guid: 4cdf00cc52300bc459314adce1a0db39, type: 3}
-  audioSource: {fileID: 4313407201819683991}
+  sonido: {fileID: 0}
+  audioSource: {fileID: 0}
   descripcion: 
---- !u!61 &5860150948449592704
+--- !u!61 &3206807530669529928
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,7 +149,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.02, y: 1.01}
+    oldSize: {x: 2.2, y: 1.7}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -157,7 +157,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-2347426527064188608
+--- !u!114 &-3983129123268469750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,8 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac94585b6c844a541bc6be3b92b5efbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Atropello
-  entidadData: {fileID: -4954538007600146821}
---- !u!82 &4313407201819683991
+  entidadData: {fileID: 0}
+--- !u!82 &6392947494227079271
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
