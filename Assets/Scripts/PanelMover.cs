@@ -1,40 +1,39 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PanelSlideIntoCamera : MonoBehaviour
+public class PanelMover : MonoBehaviour
 {
-    [Header("Referencias")]
-    [Tooltip("Transform de la cámara que seguirá el panel. Si está vacío usará Camera.main")]
-    public Transform camara;
+    [Header("Referencia al Panel")]
+    public RectTransform panel;
 
-    [Header("Posiciones")]
-    [Tooltip("Posición relativa inicial (fuera de la pantalla) respecto a la cámara")]
-    public Vector3 offsetInicial = new Vector3(-600f, 0f, 0f);
+    [Header("Configuración de Movimiento")]
+    public Vector2 posicionInicial;
+    public Vector2 posicionFinal;
+    public float duracion = 1.5f;
 
-    [Tooltip("Posición final respecto a la cámara una vez entra")]
-    public Vector3 offsetObjetivo = new Vector3(0f, 0f, 0f);
+    private float tiempoTranscurrido = 0f;
+    private bool moviendo = false;
 
-    [Header("Movimiento")]
-    [Tooltip("Velocidad de deslizamiento del panel")]
-    public float velocidad = 5f;
 
-    [Tooltip("Si está activo el panel se moverá, si se desactiva volverá a su posición inicial")]
-    public bool mostrar = false;
-
-    private Vector3 posicionObjetivo;
-
-    void Start()
+    private void Start()
     {
-        if (camara == null) camara = Camera.main.transform;
-
-        // Al iniciar se coloca fuera de pantalla
-        transform.position = camara.position + offsetInicial;
+        // Colocamos el panel en la primera posición
+        panel.anchoredPosition = posicionInicial;
+        moviendo = true;
     }
 
-    void Update()
+    private void Update()
     {
-        posicionObjetivo = camara.position + (mostrar ? offsetObjetivo : offsetInicial);
+        if (!moviendo) return;
 
-        // Movimiento suave hacia la posición calculada
-        transform.position = Vector3.Lerp(transform.position, posicionObjetivo, Time.deltaTime * velocidad);
+        tiempoTranscurrido += Time.deltaTime;
+        float t = tiempoTranscurrido / duracion;
+
+        // Interpolamos la posición
+        panel.anchoredPosition = Vector2.Lerp(posicionInicial, posicionFinal, t);
+
+        // Detenemos cuando termina
+        if (t >= 1f)
+            moviendo = false;
     }
 }

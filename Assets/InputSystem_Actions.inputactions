@@ -70,6 +70,17 @@
                 },
                 {
                     "name": "",
+                    "id": "7fc28af3-d3ff-41b9-b71b-558c170ac217",
+                    "path": "<Gamepad>/rightStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "d9de13f9-e749-45c7-9455-a5f5a6e31922",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
@@ -94,6 +105,17 @@
                     "name": "",
                     "id": "ec5bc775-985f-4b64-9664-430f992a12a8",
                     "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a08e6586-730e-4993-a2f6-0d13d7e0440f",
+                    "path": "<Gamepad>/rightStick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
