@@ -5,6 +5,7 @@ using UnityEngine.Audio;
 public class TrenMovimiento : MonoBehaviour
 {
     [SerializeField] public float velocidad = 5f;
+    public ScreenEffects screenEffects;
     public GameManager gameManager;
     public SpawnManager spawnManager;
     public GameObject resetPoint;
@@ -123,6 +124,7 @@ public class TrenMovimiento : MonoBehaviour
             else if (gameManager.decision == 0)
             {
                 Debug.Log("Fin del juego)");
+                StartCoroutine(DelayDeathEffect());
             }
         }
     }
@@ -138,5 +140,10 @@ public class TrenMovimiento : MonoBehaviour
 
         gameManager.blocked = false;
         blockingInputs = false;
+    }
+    IEnumerator DelayDeathEffect()
+    {
+        yield return new WaitForSeconds(0.7f);
+        screenEffects.PlayDeathEffects();
     }
 }
