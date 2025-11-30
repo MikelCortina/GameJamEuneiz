@@ -119,6 +119,81 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &36524314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 36524315}
+  - component: {fileID: 36524317}
+  - component: {fileID: 36524316}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &36524315
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36524314}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1175733542}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 514.34, y: -2377}
+  m_SizeDelta: {x: 1239.7368, y: 605.972}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &36524316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36524314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -599198193, guid: 9b1257e633876874b897e2d853657f34, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &36524317
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36524314}
+  m_CullTransparentMesh: 1
 --- !u!1 &51353802
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +339,8 @@ MonoBehaviour:
     -- License: Creative Commons 0\n\nLegoForm3.wav by CGEffex -- https://freesound.org/s/104822/
     -- License: Attribution 4.0\n\nChoque carne -- Mikel Cortina\n\nMusica:\nSymphony
     No.25 in G Minor -- Wolfgang Amadeus Mozart -- Dominio Publico\n\nTrio Sonata
-    in D Minor, Op. 1 No. 12, RV 63 \"La follia\" -- Vivaldi -- Dominio Publico (Editado)"
+    in D Minor, Op. 1 No. 12, RV 63 \"La follia\" -- Vivaldi -- Dominio Publico (Editado)\n\nFuente:
+    https://uncut.wtf/monospace/max-hana/"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8385343233aef064ebf7a228fe800669, type: 2}
   m_sharedMaterial: {fileID: -8789058527271291430, guid: 8385343233aef064ebf7a228fe800669, type: 2}
@@ -553,7 +629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Creditos
   panelCreditos: {fileID: 1175733541}
-  speed: 75
+  speed: 100
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
 --- !u!1 &680337976
 GameObject:
@@ -740,6 +816,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 276464472}
+  - {fileID: 36524315}
   m_Father: {fileID: 646733088}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
