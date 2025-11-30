@@ -16,6 +16,8 @@ public class TrenMovimiento : MonoBehaviour
 
     private Vector3 targetPosition;
 
+    private bool blockingInputs = false;
+
     [SerializeField] private float smoothTimeVertical = 0.25f; // Tiempo de suavizado vertical
     private float velocityY = 0f; // Necesario para SmoothDamp
 
@@ -106,23 +108,32 @@ public class TrenMovimiento : MonoBehaviour
                 IrPorArriba();
                 gameManager.canChangeTrack = false;
             }
-
-            if (gameManager.decision == 2)
+            else if (gameManager.decision == 2)
             {
                 IrPorAbajo();
                 gameManager.canChangeTrack = false;
             }
-               
+            else if (gameManager.decision == 0)
+            {
+                Debug.Log("Fin del juego)");
+            }
+
+
         }
+      
+
     }
 
     public IEnumerator BlockInputs()
     {
+        if (blockingInputs) yield break; // Evita apilar bloqueos
 
+        blockingInputs = true;
         gameManager.blocked = true;
+
         yield return new WaitForSeconds(0.2f);
+
         gameManager.blocked = false;
-
-
+        blockingInputs = false;
     }
 }

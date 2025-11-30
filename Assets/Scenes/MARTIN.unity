@@ -550,7 +550,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 264136553820460952, guid: ded393eef766471488d5d9a4e2d6103c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 102.35
+      value: 126.770004
       objectReference: {fileID: 0}
     - target: {fileID: 264136553820460952, guid: ded393eef766471488d5d9a4e2d6103c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1151,7 +1151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &597481005
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2191,6 +2191,7 @@ MonoBehaviour:
   canChangeTrack: 1
   decisionParaCuestas: 0
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  blocked: 0
 --- !u!4 &1174037452
 Transform:
   m_ObjectHideFlags: 0
@@ -4164,7 +4165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 334624605028115024, guid: 2f4265453b4daac43b5eeb70cb8e545e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -146.82
+      value: -122.4
       objectReference: {fileID: 0}
     - target: {fileID: 334624605028115024, guid: 2f4265453b4daac43b5eeb70cb8e545e, type: 3}
       propertyPath: m_LocalPosition.y
