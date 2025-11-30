@@ -56,7 +56,7 @@ AudioSource:
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.9
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -219,9 +219,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 159222755942375603}
     m_Modifications:
     - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+      propertyPath: noSonido
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: audioSource
       value: 
-      objectReference: {fileID: -403320558417818861}
+      objectReference: {fileID: 0}
     - target: {fileID: 513357527295148672, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -361,9 +365,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 159222755942375603}
     m_Modifications:
     - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+      propertyPath: noSonido
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: audioSource
       value: 
-      objectReference: {fileID: -403320558417818861}
+      objectReference: {fileID: 0}
     - target: {fileID: 513357527295148672, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -645,9 +653,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 159222755942375603}
     m_Modifications:
     - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+      propertyPath: noSonido
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: audioSource
       value: 
-      objectReference: {fileID: -403320558417818861}
+      objectReference: {fileID: 0}
     - target: {fileID: 513357527295148672, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -787,9 +799,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 159222755942375603}
     m_Modifications:
     - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
+      propertyPath: noSonido
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4954538007600146821, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: audioSource
       value: 
-      objectReference: {fileID: -403320558417818861}
+      objectReference: {fileID: 0}
     - target: {fileID: 513357527295148672, guid: 6eb2b6e96e5b39648beca401ea46b26e, type: 3}
       propertyPath: m_SortingOrder
       value: 3

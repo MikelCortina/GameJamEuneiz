@@ -13,22 +13,26 @@ public class EntidadData : MonoBehaviour
 
     public AudioClip sonido1;
     public AudioClip sonido2;
+    public ParticleSystem particula;
     private SpriteRenderer spriteRenderer;
-    public Sprite sangre;
 
+    public Sprite blood;
 
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     [TextArea]
     public string descripcion; // opcional
+
+
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();   // Se obtiene al nacer el objeto
-        audioSource = GetComponentInParent<AudioSource>(); // Obtiene el componente en el padre
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponentInParent<AudioSource>();
+    
     }
     public void Morir()
     {
-        spriteRenderer.sprite = sangre;
+        spriteRenderer.sprite = blood;
         Debug.Log("Atropellado");
         estaVivo = false;
         //animacion
@@ -38,6 +42,9 @@ public class EntidadData : MonoBehaviour
         audioSource.Play();
         audioSource.clip = sonido2;
         audioSource.Play();
+        //Particula
+        Debug.Log("PeioParticula");
+        particula.Play();
 
         Destroy(gameObject,5f);
     }
