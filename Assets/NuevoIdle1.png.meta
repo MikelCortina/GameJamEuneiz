@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 43db59a504f5e7e4ebbfcf6855ce5d4f
+guid: 39141886fd4f6d24587a8eba6629db29
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2949287754636896459
-    second: palanca para abajo_0
+      213: -2139005031396543445
+    second: NuevoIdle1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: palanca para abajo_0
+      name: NuevoIdle1_0
       rect:
         serializedVersion: 2
-        x: 557
-        y: 271
-        width: 646
-        height: 578
-      alignment: 9
-      pivot: {x: 0.50990176, y: 0.51106656}
+        x: 274
+        y: 508
+        width: 285
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5375574c9660217d0800000000000000
-      internalID: -2949287754636896459
+      spriteID: b24f5d2c14ab052e0800000000000000
+      internalID: -2139005031396543445
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 42a1a3a4e5264ea4594eae95f2a57ad0
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      palanca para abajo_0: -2949287754636896459
+      NuevoIdle1_0: -2139005031396543445
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

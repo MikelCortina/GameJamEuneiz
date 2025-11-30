@@ -5,6 +5,7 @@ public class AnimationSoundPlay : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip audioClip;
+    public Animator animator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,5 +25,9 @@ public class AnimationSoundPlay : MonoBehaviour
     public void StopSoundLatido1()
     {
         audioSource.Stop();
+    }
+    public void changeIdle()
+    {
+        animator.Play("NuevoIdle");
     }
 }

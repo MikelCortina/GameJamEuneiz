@@ -5,10 +5,10 @@ public class ActivarCinematicaPorCamara : MonoBehaviour
 {
     public PlayableDirector cinematica;
     public bool soloUnaVez = true;
-    public GameObject panelCine;
     public IntroLetterbox letterbox; // referencia necesaria
 
     private bool yaActivado = false;
+    
 
     private void Start()
     {
@@ -21,7 +21,6 @@ public class ActivarCinematicaPorCamara : MonoBehaviour
         if (other.CompareTag("TriggerAnimacion"))
         {
             letterbox.CerrarBandas(); // solo aquí se cierran
-            panelCine.SetActive(true);
             if (!yaActivado || !soloUnaVez)
             {
                 cinematica.Play();

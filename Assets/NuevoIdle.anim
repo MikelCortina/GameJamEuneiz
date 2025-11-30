@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PalancaAbajoMedio
+  m_Name: NuevoIdle
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,11 +21,11 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -2949287754636896459, guid: 43db59a504f5e7e4ebbfcf6855ce5d4f, type: 3}
+      value: {fileID: -2139005031396543445, guid: 39141886fd4f6d24587a8eba6629db29, type: 3}
     - time: 0.016666668
-      value: {fileID: -8509380731511351465, guid: 58cb26ceae506f24fa2a3c243710ffec, type: 3}
+      value: {fileID: 5086353854325273015, guid: c046c897116493b4a8723d7e9c28db71, type: 3}
     - time: 0.033333335
-      value: {fileID: -5870499800631382294, guid: 7d8c80ba827b79140b04316dae562064, type: 3}
+      value: {fileID: 7514555622054385876, guid: 001c0cc974fa08b449dad9ade6128104, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,9 +48,9 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -2949287754636896459, guid: 43db59a504f5e7e4ebbfcf6855ce5d4f, type: 3}
-    - {fileID: -8509380731511351465, guid: 58cb26ceae506f24fa2a3c243710ffec, type: 3}
-    - {fileID: -5870499800631382294, guid: 7d8c80ba827b79140b04316dae562064, type: 3}
+    - {fileID: -2139005031396543445, guid: 39141886fd4f6d24587a8eba6629db29, type: 3}
+    - {fileID: 5086353854325273015, guid: c046c897116493b4a8723d7e9c28db71, type: 3}
+    - {fileID: 7514555622054385876, guid: 001c0cc974fa08b449dad9ade6128104, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -61,7 +61,7 @@ AnimationClip:
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 0
+    m_LoopTime: 1
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
