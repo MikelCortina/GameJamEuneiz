@@ -29,6 +29,8 @@ public class EntidadData : MonoBehaviour
         //sonido
         audioSource.clip = sonido1;
         audioSource.Play();
+        audioSource.clip = sonido2;
+        audioSource.Play();
 
         Destroy(gameObject,5f);
     }
