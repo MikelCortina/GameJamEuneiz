@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScreenEffects : MonoBehaviour
@@ -8,7 +10,8 @@ public class ScreenEffects : MonoBehaviour
     public float fadeInDuration = 0.3f;
     public float holdDuration = 1.5f;
     public float fadeToBlackDuration = 1f;
-
+    public GameObject panel;
+    public AudioSource audioSource;
     public void PlayDeathEffects()
     {
         StartCoroutine(FlashWhiteToBlack());
@@ -16,6 +19,8 @@ public class ScreenEffects : MonoBehaviour
 
     private IEnumerator FlashWhiteToBlack()
     {
+        
+        panel.SetActive(false);
         Time.timeScale = 0f; // El juego se pausa, pero el efecto seguirá
 
         // 1️⃣ Fade IN blanco (UNSCALED)
@@ -29,6 +34,7 @@ public class ScreenEffects : MonoBehaviour
         }
 
         flashImage.color = new Color(1f, 1f, 1f, 1f);
+        audioSource.Play();
 
         // 2️⃣ Mantener blanco usando WaitForSecondsRealtime
         yield return new WaitForSecondsRealtime(holdDuration);
@@ -46,5 +52,9 @@ public class ScreenEffects : MonoBehaviour
         }
 
         flashImage.color = Color.black;
+
+        SceneManager.LoadScene("MenuInicial");
+        Time.timeScale = 1f;
+
     }
 }

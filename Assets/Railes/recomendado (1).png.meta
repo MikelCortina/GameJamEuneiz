@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: ddb79b19b17778745936a95461d56cdd
+guid: 3f880642a8aef9844be5c9470b565040
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6777521679289465186
-    second: manu de pausa 2_0
+      213: -6724931610878403522
+    second: recomendado (1)_0
   - first:
-      213: -5863991653291615070
-    second: manu de pausa 2_1
+      213: -5849179714195264843
+    second: recomendado (1)_1
+  - first:
+      213: 8828274425561665823
+    second: recomendado (1)_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: manu de pausa 2_0
+      name: recomendado (1)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 20
-        height: 152
+        x: 389
+        y: 404
+        width: 993
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e96417801f761f1a0800000000000000
-      internalID: -6777521679289465186
+      spriteID: e3c1cc2845e3ca2a0800000000000000
+      internalID: -6724931610878403522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: manu de pausa 2_1
+      name: recomendado (1)_1
       rect:
         serializedVersion: 2
-        x: 1558
-        y: 0
-        width: 362
-        height: 416
+        x: 579
+        y: 416
+        width: 82
+        height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +143,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ac92bbf8aaee9ea0800000000000000
-      internalID: -5863991653291615070
+      spriteID: 5ba68fb4a0a83dea0800000000000000
+      internalID: -5849179714195264843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: recomendado (1)_2
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 418
+        width: 87
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f11d44bd0d4548a70800000000000000
+      internalID: 8828274425561665823
       vertices: []
       indices: 
       edges: []
@@ -150,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      manu de pausa 2_0: -6777521679289465186
-      manu de pausa 2_1: -5863991653291615070
+      recomendado (1)_0: -6724931610878403522
+      recomendado (1)_1: -5849179714195264843
+      recomendado (1)_2: 8828274425561665823
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

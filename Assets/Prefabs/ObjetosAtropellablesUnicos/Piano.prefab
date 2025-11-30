@@ -157,7 +157,7 @@ MonoBehaviour:
   sonido1: {fileID: 8300000, guid: 7d06ae8af86f7bc44b6d1a4deec590a5, type: 3}
   sonido2: {fileID: 8300000, guid: 7d06ae8af86f7bc44b6d1a4deec590a5, type: 3}
   particula: {fileID: 8334985486258302012}
-  blood: {fileID: -4132806742358380604, guid: 604275cf2370a1748b823c9be96c84fd, type: 3}
+  blood: {fileID: 21300000, guid: 0d3717e7e0432d545a872577c8a5085e, type: 3}
   audioSource: {fileID: 0}
   descripcion: 
 --- !u!114 &-3983129123268469750
