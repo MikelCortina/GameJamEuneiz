@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     private InputAction Arriba;
     private InputAction Abajo;
 
+    private Gamepad gamepad;
+
     private void OnEnable()
     {
         if (inputActions == null)
@@ -57,6 +59,13 @@ public class GameManager : MonoBehaviour
             decision = 1;
             decisionParaCuestas = decision;
             audioSource.Play(); // suena la palanca
+            var gamepad = Gamepad.current;
+            if (gamepad != null)
+            {
+                // Iniciar la vibración del gamepad
+                gamepad.SetMotorSpeeds(0.3f, 0.3f);
+                Invoke("StopVibration", 0.1f); // Detener la vibración después de 0.2 segundos 
+            }
         }
 
         if (Abajo.triggered && canChangeTrack && decision != 2)
@@ -66,6 +75,13 @@ public class GameManager : MonoBehaviour
             decision = 2;
             decisionParaCuestas = decision;
             audioSource.Play(); // tambi�n puedes hacer sonar aqu� si deseas
+            var gamepad = Gamepad.current;
+            if (gamepad != null)
+            {
+                // Iniciar la vibración del gamepad
+                gamepad.SetMotorSpeeds(0.3f, 0.3f);
+                Invoke("StopVibration", 0.1f); // Detener la vibración después de 0.2 segundos 
+            }
         }
 
         
@@ -86,5 +102,13 @@ public class GameManager : MonoBehaviour
 
         lastDecision = decision; // Actualizamos el valor anterior al final
         
+    }
+    private void StopVibration()
+    {
+        var pad = Gamepad.current;
+        if (pad != null)
+        {
+            pad.SetMotorSpeeds(0f, 0f);
+        }
     }
 }
