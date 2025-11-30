@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class TrenMovimiento : MonoBehaviour
 {
@@ -71,9 +72,25 @@ public class TrenMovimiento : MonoBehaviour
     {
         if (collision.CompareTag("ResetPoint"))
         {
+            StartCoroutine(BlockInputs());
             Debug.Log("RESET");
             gameManager.canChangeTrack = true;
-            gameManager.decision = 0;
+
+
+            gameManager.nuevaDecision = 0;
+            if (gameManager.decisionParaCuestas == 1)
+            {
+                gameManager.animator.Play("PalancaArribaMedio");
+                gameManager.audioSource.PlayOneShot(gameManager.palancaArribaMedioSound);
+            }
+            else if (gameManager.decisionParaCuestas == 2)
+            {
+                gameManager.animator.Play("PalancaAbajoMedio");
+                gameManager.audioSource.PlayOneShot(gameManager.palancaAbajoMedioSound);
+            }
+
+
+
             //resetPoint.transform.position += new Vector3(distanciaEntrePuntos, 0, 0);
             IrPorElMedio();
         }
@@ -97,5 +114,15 @@ public class TrenMovimiento : MonoBehaviour
             }
                
         }
+    }
+
+    public IEnumerator BlockInputs()
+    {
+
+        gameManager.blocked = true;
+        yield return new WaitForSeconds(0.2f);
+        gameManager.blocked = false;
+
+
     }
 }

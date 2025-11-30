@@ -3,88 +3,99 @@ using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
-    public int decision;
+    public int decision = 0; // 0 = medio, 1 = arriba, 2 = abajo
+
+    // Sonidos originales
     public AudioClip palancaArribaSound;
     public AudioClip palancaAbajoSound;
     public AudioClip palancaArribaMedioSound;
     public AudioClip palancaAbajoMedioSound;
+
     public AudioSource audioSource;
+    public Animator animator;
+
+    public int nuevaDecision;
+
     public bool canChangeTrack = true;
-    public int lastDecision = -1; // valor inicial que nunca ser� 0
     public int decisionParaCuestas;
 
-    public InputActionAsset inputActions; // Referencia al asset input actions 
-
+    // Input
+    public InputActionAsset inputActions;
     private InputAction Arriba;
     private InputAction Abajo;
+
+    public bool blocked;
 
     private void OnEnable()
     {
         if (inputActions == null)
         {
-            Debug.LogWarning("InputActionAsset no asignado en el inspector.");
+            Debug.LogWarning("InputActionAsset no asignado.");
             return;
         }
 
-        // Buscar las acciones por ruta (ajusta el nombre del action map / acción si es distinto)
-        Arriba = inputActions.FindAction("Player Controls/Up");
-        Abajo  = inputActions.FindAction("Player Controls/Down");
 
-        // Enable the actions
-        Arriba.Enable();
-        Abajo.Enable();        
+        Arriba = inputActions.FindAction("Player Controls/Up");
+        Abajo = inputActions.FindAction("Player Controls/Down");
+
+        Arriba?.Enable();
+        Abajo?.Enable();
     }
 
     private void OnDisable()
     {
-        // Disable the actions
-        Arriba.Disable();
-        Abajo.Disable();
-    }
-
-    void Start()
-    {
-        // Asegurar que el audioSource tenga un clip asignado
-      
+        Arriba?.Disable();
+        Abajo?.Disable();
     }
 
     void Update()
     {
-        if (Arriba.triggered && canChangeTrack&&decision!=1) // solo al pulsar una vez
+        nuevaDecision = decision;
+
+        // Solo cambia cuando se PRESIONA (triggered), no al mantener ni al soltar
+        if (Arriba.triggered && canChangeTrack&&!blocked)
         {
-          
-            audioSource.clip = palancaArribaSound;
-            decision = 1;
-            decisionParaCuestas = decision;
-            audioSource.Play(); // suena la palanca
+            nuevaDecision = 1; // Siempre a arriba al pulsar arriba
         }
-
-        if (Abajo.triggered && canChangeTrack && decision != 2)
+        else if (Abajo.triggered && canChangeTrack && !blocked)
         {
-        
-            audioSource.clip = palancaAbajoSound;
-            decision = 2;
-            decisionParaCuestas = decision;
-            audioSource.Play(); // tambi�n puedes hacer sonar aqu� si deseas
+            nuevaDecision = 2; // Siempre a abajo al pulsar abajo
         }
-
         
-            // Si antes era 1 o 2, y ahora pas� a 0, entonces reproduce el sonido
-            if ((lastDecision == 1 ) && decision == 0)
-            {
-         
-            audioSource.clip = palancaArribaMedioSound;
-                audioSource.Play();
-            }
-              // Si antes era 1 o 2, y ahora pas� a 0, entonces reproduce el sonido
-            if ((lastDecision == 2) && decision == 0)
-            {
-            audioSource.clip = palancaAbajoMedioSound;
-            audioSource.Play();
-             }
 
+        // OPCIONAL: si quieres un botón para volver al centro (por ejemplo, ejemplo, el mismo botón de abajo dos veces o otro botón)
+        // Descomenta esto si lo necesitas más adelante
+        // else if (algúnOtroBotón.triggered)
+        //     nuevaDecision = 0;
 
-        lastDecision = decision; // Actualizamos el valor anterior al final
-        
+        // Si hay cambio de posición
+        if (nuevaDecision != decision)
+        {
+            // === ANIMACIÓN DE TRANSICIÓN ===
+            if (decision == 0 && nuevaDecision == 1)
+                animator.Play("PalancaMedioArriba");
+            else if (decision == 0 && nuevaDecision == 2)
+                animator.Play("PalancaMedioAbajo");
+            else if (decision == 1 && nuevaDecision == 2)
+                animator.Play("PalancaArribaAbajo");
+            else if (decision == 2 && nuevaDecision == 1)
+                animator.Play("PalancaAbajoArriba");
+            else if (decision == 1 && nuevaDecision == 0)
+                animator.Play("PalancaArribaMedio");
+            else if (decision == 2 && nuevaDecision == 0)
+                animator.Play("PalancaAbajoMedio");
+
+            // === SONIDOS ===
+            if (nuevaDecision == 1)
+                audioSource.PlayOneShot(palancaArribaSound);
+            else if (nuevaDecision == 2)
+                audioSource.PlayOneShot(palancaAbajoSound);
+            else if (nuevaDecision == 0)
+                audioSource.PlayOneShot(decision == 1 ? palancaArribaMedioSound : palancaAbajoMedioSound);
+
+            // Actualizamos estado
+            decision = nuevaDecision;
+            decisionParaCuestas = decision;
+        }
     }
 }
