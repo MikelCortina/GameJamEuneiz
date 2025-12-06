@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
+        StopVibration();
         if (inputActions == null)
         {
             Debug.LogWarning("InputActionAsset no asignado.");
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
 
     private void OnDisable()
     {
+        StopVibration();
         Arriba?.Disable();
         Abajo?.Disable();
         pausa?.Disable();
