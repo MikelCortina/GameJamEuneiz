@@ -26,6 +26,13 @@ public class MoverObjetoPorDistancia : MonoBehaviour
     public AnimationClip vibra;
     public AnimationClip idle;
 
+ 
+    public Animator portal;
+
+    public AnimationClip clipPortal;
+
+    public ParticleSystem estrellas;
+
     private void OnEnable()
     {
         if (NivelManager.Instancia != null)
@@ -71,6 +78,10 @@ public class MoverObjetoPorDistancia : MonoBehaviour
 
     private void MoverObjeto()
     {
+        estrellas.Play();
+
+        portal.Play(clipPortal.name);
+
         entidadData.Morir();
 
         if (posicionesDestino.Length != 3)
