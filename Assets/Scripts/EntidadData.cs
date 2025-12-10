@@ -32,6 +32,8 @@ public class EntidadData : MonoBehaviour
     }
     public void Morir()
     {
+        Collider2D col = GetComponent<Collider2D>();
+        col.enabled = false;
         spriteRenderer.sprite = blood;
         Debug.Log("Atropellado");
         estaVivo = false;

@@ -1,56 +1,109 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
-public class MoverObjetoPorTrigger : MonoBehaviour
+public class MoverObjetoPorDistancia : MonoBehaviour
 {
     [Header("Objeto que se va a mover")]
-    [Tooltip("Arrastra aquí el GameObject que quieres que se mueva")]
     public Transform objetoAMover;
 
-    [Header("Opciones")]
-    public bool moverSoloUnaVez = true;        // Si quieres que solo se mueva la primera vez
-    public bool mantenerOffsetX = true;        // Mantener la posición X original del objeto a mover
-    public bool mantenerOffsetZ = true;        // Mantener la posición Z original (útil en 2D suele ser 0)
+    [Header("Tres posiciones posibles para el teletransporte")]
+    public Transform[] posicionesDestino = new Transform[3];
 
+    [Header("Distancia base")]
+    public float distanciaBase = 5f;
+
+    [Header("Opciones adicionales")]
+    public bool moverSoloUnaVez = true;
+
+    private Transform objetoDetector;
     private bool yaMovio = false;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private float nivelActual = 0;
+
+    public EntidadData entidadData;
+
+    public Animator animator;
+
+    public AnimationClip vibra;
+    public AnimationClip idle;
+
+    private void OnEnable()
     {
-        // Opcional: puedes filtrar por tag, layer, etc.
-        // if (!collision.CompareTag("Player")) return;
-
-        if (moverSoloUnaVez && yaMovio) return;
-
-        if (objetoAMover == null)
+        if (NivelManager.Instancia != null)
         {
-            Debug.LogError("¡Asigna un objeto a mover en el Inspector!", this);
+            nivelActual = NivelManager.Instancia.NivelActual;
+            NivelManager.Instancia.OnNivelCambiado += ActualizarNivel;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (NivelManager.Instancia != null)
+            NivelManager.Instancia.OnNivelCambiado -= ActualizarNivel;
+    }
+
+    private void ActualizarNivel(float nuevoNivel)
+    {
+        nivelActual = nuevoNivel;
+    }
+
+    private void Start()
+    {
+        GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+
+        if (playerObj != null)
+            objetoDetector = playerObj.transform;
+    }
+
+    private void Update()
+    {
+        if (objetoAMover == null || objetoDetector == null)
+            return;
+
+        if (moverSoloUnaVez && yaMovio)
+            return;
+
+        float distanciaRequerida = distanciaBase / (1f + nivelActual);
+        float distanciaActual = Vector3.Distance(objetoDetector.position, transform.position);
+
+        if (distanciaActual <= distanciaRequerida)
+            SetVibra();
+    }
+
+    private void MoverObjeto()
+    {
+        entidadData.Morir();
+
+        if (posicionesDestino.Length != 3)
+        {
+            Debug.LogError("Debes asignar exactamente 3 posiciones destino.");
             return;
         }
 
-        // Calculamos la nueva posición
-        Vector3 nuevaPosicion = objetoAMover.position;
+        float[] distancias = new float[3];
+        for (int i = 0; i < 3; i++)
+            distancias[i] = Vector3.Distance(objetoAMover.position, posicionesDestino[i].position);
 
-        // Siempre copiamos la Y del objeto que tiene este script
-        nuevaPosicion.y = transform.position.y;
+        int indiceMasCercano = 0;
+        for (int i = 1; i < 3; i++)
+            if (distancias[i] < distancias[indiceMasCercano])
+                indiceMasCercano = i;
 
-        // Opcional: mantener X y/o Z original del objeto a mover
-        if (mantenerOffsetX)
-            nuevaPosicion.x = objetoAMover.position.x;
+        var indicesValidos = new System.Collections.Generic.List<int> { 0, 1, 2 };
+        indicesValidos.Remove(indiceMasCercano);
 
-        if (mantenerOffsetZ)
-            nuevaPosicion.z = objetoAMover.position.z;
+        int indiceElegido = indicesValidos[Random.Range(0, indicesValidos.Count)];
 
-        // Movemos el objeto
-        objetoAMover.position = nuevaPosicion;
+        objetoAMover.position = posicionesDestino[indiceElegido].position;
 
         yaMovio = true;
-
-        Debug.Log($"Objeto movido a Y = {nuevaPosicion.y}");
     }
 
-    // Reinicia si sales del trigger y quieres permitir mover otra vez
-    private void OnTriggerExit2D(Collider2D collision)
+    public void SetIdle()
     {
-        if (!moverSoloUnaVez)
-            yaMovio = false;
+        animator.Play(idle.name);
+    }
+    public void SetVibra()
+    {
+        animator.Play(vibra.name);
     }
 }

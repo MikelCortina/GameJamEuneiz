@@ -105,6 +105,8 @@ public class FollowSpline2D : MonoBehaviour
 
     public void OnBranchTriggerEntered(BranchTrigger trigger)
     {
+        NivelManager.Instancia.SumarNivel();
+
         if (isSwitching || activeSpline != mainSplineContainer) return;
 
         int lever = Manager.Instance.leverState;

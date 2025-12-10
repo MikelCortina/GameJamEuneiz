@@ -185,10 +185,77 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 882814136391798567, guid: a2f9715b3fc7291448a38992d1520891, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3804237560965642880}
+    - targetCorrespondingSourceObject: {fileID: 882814136391798567, guid: a2f9715b3fc7291448a38992d1520891, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3572486207968445106}
   m_SourcePrefab: {fileID: 100100000, guid: a2f9715b3fc7291448a38992d1520891, type: 3}
+--- !u!1 &4315837192247506800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 882814136391798567, guid: a2f9715b3fc7291448a38992d1520891, type: 3}
+  m_PrefabInstance: {fileID: 4009485462594353239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3804237560965642880
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4315837192247506800}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bed127aaf54d5944e8903ce8121da77c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3572486207968445106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4315837192247506800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65eba8dbccd6b7b48ab90f327f32a94d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoverObjetoPorDistancia
+  objetoAMover: {fileID: 0}
+  posicionesDestino:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  distanciaBase: 5
+  moverSoloUnaVez: 1
+  entidadData: {fileID: 8280818232903319353}
+  animator: {fileID: 3804237560965642880}
+  vibra: {fileID: 7400000, guid: 6a90262b02d506b4ea0b4afc104e3269, type: 2}
+  idle: {fileID: 7400000, guid: eede51a2137647b43ad1a40c52bade5a, type: 2}
 --- !u!4 &5995439756295645745 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7246460547695563366, guid: a2f9715b3fc7291448a38992d1520891, type: 3}
   m_PrefabInstance: {fileID: 4009485462594353239}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8280818232903319353 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4228900357247285394, guid: a2f9715b3fc7291448a38992d1520891, type: 3}
+  m_PrefabInstance: {fileID: 4009485462594353239}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4315837192247506800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13e097ed2d23cbc4f9b403986b7cf6fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Oveja

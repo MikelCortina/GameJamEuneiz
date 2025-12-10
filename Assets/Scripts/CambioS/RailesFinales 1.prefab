@@ -1144,35 +1144,84 @@ PrefabInstance:
       propertyPath: m_Name
       value: Oveja
       objectReference: {fileID: 0}
+    - target: {fileID: 3572486207968445106, guid: 93fbb0faeebcb1445a7799b2b4d702f8, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 4105572222268531051}
+    - target: {fileID: 3572486207968445106, guid: 93fbb0faeebcb1445a7799b2b4d702f8, type: 3}
+      propertyPath: entidadData
+      value: 
+      objectReference: {fileID: 2184589594618918564}
+    - target: {fileID: 3572486207968445106, guid: 93fbb0faeebcb1445a7799b2b4d702f8, type: 3}
+      propertyPath: objetoAMover
+      value: 
+      objectReference: {fileID: 6529024086285912818}
+    - target: {fileID: 3572486207968445106, guid: 93fbb0faeebcb1445a7799b2b4d702f8, type: 3}
+      propertyPath: distanciaBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3572486207968445106, guid: 93fbb0faeebcb1445a7799b2b4d702f8, type: 3}
+      propertyPath: m_EditorClassIdentifier
+      value: Assembly-CSharp::MoverObjetoPorTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3572486207968445106, guid: 93fbb0faeebcb1445a7799b2b4d702f8, type: 3}
+      propertyPath: 'posicionesDestino.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8146654765688288101}
+    - target: {fileID: 3572486207968445106, guid: 93fbb0faeebcb1445a7799b2b4d702f8, type: 3}
+      propertyPath: 'posicionesDestino.Array.data[1]'
+      value: 
+      objectReference: {fileID: 6917671492950950491}
+    - target: {fileID: 3572486207968445106, guid: 93fbb0faeebcb1445a7799b2b4d702f8, type: 3}
+      propertyPath: 'posicionesDestino.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3887339495076589411}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4315837192247506800, guid: 93fbb0faeebcb1445a7799b2b4d702f8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1964662082420094977}
+      addedObject: {fileID: 4105572222268531051}
   m_SourcePrefab: {fileID: 100100000, guid: 93fbb0faeebcb1445a7799b2b4d702f8, type: 3}
+--- !u!114 &2184589594618918564 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8280818232903319353, guid: 93fbb0faeebcb1445a7799b2b4d702f8, type: 3}
+  m_PrefabInstance: {fileID: 7834672247880141213}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6295671541184413421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13e097ed2d23cbc4f9b403986b7cf6fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Oveja
 --- !u!1 &6295671541184413421 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4315837192247506800, guid: 93fbb0faeebcb1445a7799b2b4d702f8, type: 3}
   m_PrefabInstance: {fileID: 7834672247880141213}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1964662082420094977
-MonoBehaviour:
+--- !u!95 &4105572222268531051
+Animator:
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6295671541184413421}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65eba8dbccd6b7b48ab90f327f32a94d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MoverObjetoPorTrigger
-  objetoAMover: {fileID: 6529024086285912818}
-  moverSoloUnaVez: 1
-  mantenerOffsetX: 1
-  mantenerOffsetZ: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bed127aaf54d5944e8903ce8121da77c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &7966855261968886062 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 159222755942375603, guid: 93fbb0faeebcb1445a7799b2b4d702f8, type: 3}
