@@ -105,7 +105,7 @@ public class FollowSpline2D : MonoBehaviour
 
     public void OnBranchTriggerEntered(BranchTrigger trigger)
     {
-        NivelManager.Instancia.SumarNivel();
+        NivelManager1.Instancia.SubirNivel();
 
         if (isSwitching || activeSpline != mainSplineContainer) return;
 
@@ -133,6 +133,7 @@ public class FollowSpline2D : MonoBehaviour
 
     public void OnMergeTriggerEntered(MergeTrigger trigger)
     {
+       
         if (isSwitching || activeSpline == mainSplineContainer) return;
 
         fromSpline = activeSpline;

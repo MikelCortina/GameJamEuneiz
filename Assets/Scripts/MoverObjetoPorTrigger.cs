@@ -22,32 +22,31 @@ public class MoverObjetoPorDistancia : MonoBehaviour
     public EntidadData entidadData;
 
     public Animator animator;
-
     public AnimationClip vibra;
     public AnimationClip idle;
 
- 
     public Animator portal;
-
     public AnimationClip clipPortal;
 
     public ParticleSystem estrellas;
 
     private void OnEnable()
     {
-        if (NivelManager.Instancia != null)
+        // Registrar eventos del manager si existe
+        if (NivelManager1.Instancia != null)
         {
-            nivelActual = NivelManager.Instancia.NivelActual;
-            NivelManager.Instancia.OnNivelCambiado += ActualizarNivel;
+            nivelActual = NivelManager1.Instancia.NivelActual;
+            NivelManager1.Instancia.OnNivelCambiado += ActualizarNivel;
         }
     }
 
     private void OnDisable()
     {
-        if (NivelManager.Instancia != null)
-            NivelManager.Instancia.OnNivelCambiado -= ActualizarNivel;
+        if (NivelManager1.Instancia != null)
+            NivelManager1.Instancia.OnNivelCambiado -= ActualizarNivel;
     }
 
+    // Se ejecuta cada vez que cualquier script cambia el nivel
     private void ActualizarNivel(float nuevoNivel)
     {
         nivelActual = nuevoNivel;
@@ -56,7 +55,6 @@ public class MoverObjetoPorDistancia : MonoBehaviour
     private void Start()
     {
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-
         if (playerObj != null)
             objetoDetector = playerObj.transform;
     }
@@ -69,17 +67,21 @@ public class MoverObjetoPorDistancia : MonoBehaviour
         if (moverSoloUnaVez && yaMovio)
             return;
 
+        // Distancia se hace más pequeña con niveles altos
         float distanciaRequerida = distanciaBase / (1f + nivelActual);
         float distanciaActual = Vector3.Distance(objetoDetector.position, transform.position);
 
         if (distanciaActual <= distanciaRequerida)
-            SetVibra();
+        {
+            // 75% probabilidad → vibrar
+            if (Random.Range(0, 4) != 3)
+                SetVibra();
+        }
     }
 
     private void MoverObjeto()
     {
         estrellas.Play();
-
         portal.Play(clipPortal.name);
 
         entidadData.Morir();
@@ -90,6 +92,7 @@ public class MoverObjetoPorDistancia : MonoBehaviour
             return;
         }
 
+        // Calcular posición más cercana
         float[] distancias = new float[3];
         for (int i = 0; i < 3; i++)
             distancias[i] = Vector3.Distance(objetoAMover.position, posicionesDestino[i].position);
@@ -99,6 +102,7 @@ public class MoverObjetoPorDistancia : MonoBehaviour
             if (distancias[i] < distancias[indiceMasCercano])
                 indiceMasCercano = i;
 
+        // Elegir uno de los otros dos destinos
         var indicesValidos = new System.Collections.Generic.List<int> { 0, 1, 2 };
         indicesValidos.Remove(indiceMasCercano);
 
@@ -113,6 +117,7 @@ public class MoverObjetoPorDistancia : MonoBehaviour
     {
         animator.Play(idle.name);
     }
+
     public void SetVibra()
     {
         animator.Play(vibra.name);
