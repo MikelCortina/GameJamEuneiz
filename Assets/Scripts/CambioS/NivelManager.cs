@@ -38,7 +38,7 @@ public class NivelManager1 : MonoBehaviour
     }
 
     // Métodos útiles
-    public void SubirNivel(float cantidad = 0.05f)
+    public void SubirNivel(float cantidad = 0.1f)
     {
         NivelActual += cantidad;
     }
