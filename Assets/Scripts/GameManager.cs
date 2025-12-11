@@ -67,7 +67,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        nuevaDecision = decision;
+        if (canChangeTrack)
+            nuevaDecision = decision;
 
         if (pausa.triggered && !pausado)
         {
@@ -135,6 +136,25 @@ public class GameManager : MonoBehaviour
             decisionParaCuestas = decision;
         }
     }
+    public void ForzarPalancaAlMedio()
+    {
+        if (decision == 1)
+            animator.Play("PalancaArribaMedio");
+        else if (decision == -1)
+            animator.Play("PalancaAbajoMedio");
+
+        // Sonido correcto al volver al centro
+        audioSource.PlayOneShot(
+            decision == 1 ? palancaArribaMedioSound : palancaAbajoMedioSound
+        );
+
+        decision = 0;
+        nuevaDecision = 0;
+        decisionParaCuestas = 0;
+
+        Debug.Log("GameManager: palanca forzada al medio por trigger.");
+    }
+
     private void StopVibration()
     {
         var pad = Gamepad.current;

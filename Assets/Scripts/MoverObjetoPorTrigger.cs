@@ -7,6 +7,7 @@ public class MoverObjetoPorDistancia : MonoBehaviour
 
     [Header("Tres posiciones posibles para el teletransporte")]
     public Transform[] posicionesDestino = new Transform[3];
+    public Transform[] posicionesDestino2 = new Transform[3];
 
     [Header("Distancia base")]
     public float distanciaBase = 5f;
@@ -131,5 +132,38 @@ public class MoverObjetoPorDistancia : MonoBehaviour
     public void SetVibra()
     {
         animator.Play(vibra.name);
+    }
+
+    public void Mover2()
+    {
+        estrellas.Play();
+        portal.Play(clipPortal.name);
+
+
+        if (posicionesDestino2.Length != 3)
+        {
+            Debug.LogError("Debes asignar exactamente 3 posiciones destino.");
+            return;
+        }
+
+        // Calcular posición más cercana
+        float[] distancias = new float[3];
+        for (int i = 0; i < 3; i++)
+            distancias[i] = Vector3.Distance(objetoAMover.position, posicionesDestino2[i].position);
+
+        int indiceMasCercano = 0;
+        for (int i = 1; i < 3; i++)
+            if (distancias[i] < distancias[indiceMasCercano])
+                indiceMasCercano = i;
+
+        // Elegir uno de los otros dos destinos
+        var indicesValidos = new System.Collections.Generic.List<int> { 0, 1, 2 };
+        indicesValidos.Remove(indiceMasCercano);
+
+        int indiceElegido = indicesValidos[Random.Range(0, indicesValidos.Count)];
+
+        objetoAMover.position = posicionesDestino2[indiceElegido].position;
+
+        yaMovio = true;
     }
 }
