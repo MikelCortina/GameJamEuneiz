@@ -282,6 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6202820835768637821}
   - component: {fileID: 1584011227676162918}
+  - component: {fileID: 982605328072304802}
   m_Layer: 0
   m_Name: RailesFinales 1
   m_TagString: Untagged
@@ -298,7 +299,7 @@ Transform:
   m_GameObject: {fileID: 716693836566782958}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.0011071363, w: 0.99999946}
-  m_LocalPosition: {x: 23.252762, y: 0.31, z: 0}
+  m_LocalPosition: {x: 23.25, y: 2.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -338,6 +339,25 @@ MonoBehaviour:
   - {fileID: 7656862523233479907}
   - {fileID: 629390479816924302}
   - {fileID: 8501030493185879148}
+--- !u!114 &982605328072304802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716693836566782958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de6a9f0dc2296fc4b89379a13323dcc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  objetos:
+  - {fileID: 2728410267310226010, guid: 381a7adb8627bfe4cb53624006e6f11b, type: 3}
+  - {fileID: 2728410267310226010, guid: cf025ec7bd4547d47982b88e3bf0edb3, type: 3}
+  - {fileID: 2728410267310226010, guid: f9154dfff77f8634b9f8ac377fb01905, type: 3}
+  - {fileID: 2728410267310226010, guid: 206c9b3ff7d05d643bc0596c4f6a4900, type: 3}
+  - {fileID: 2728410267310226010, guid: 8a608f61bac4f8c48bf6da77ef858cf0, type: 3}
+  puntoSpawn: {fileID: 3025842739311381763}
 --- !u!1 &2050963211376080042
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,7 +1367,7 @@ PrefabInstance:
       objectReference: {fileID: 6529024086285912818}
     - target: {fileID: 3572486207968445106, guid: 93fbb0faeebcb1445a7799b2b4d702f8, type: 3}
       propertyPath: distanciaBase
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3572486207968445106, guid: 93fbb0faeebcb1445a7799b2b4d702f8, type: 3}
       propertyPath: m_EditorClassIdentifier

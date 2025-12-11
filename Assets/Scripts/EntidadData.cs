@@ -30,7 +30,7 @@ public class EntidadData : MonoBehaviour
         audioSource = GetComponentInParent<AudioSource>();
     
     }
-    public void Morir()
+    public virtual void Morir()
     {
         Collider2D col = GetComponent<Collider2D>();
         col.enabled = false;
@@ -48,6 +48,6 @@ public class EntidadData : MonoBehaviour
         Debug.Log("PeioParticula");
         particula.Play();
 
-        Destroy(gameObject,5f);
+        Destroy(gameObject,10f);
     }
 }
