@@ -106,6 +106,7 @@ public class FollowSpline2D : MonoBehaviour
     public void OnBranchTriggerEntered(BranchTrigger trigger)
     {
         NivelManager1.Instancia.SubirNivel();
+        speed = speed+0.05f;    
 
         if (isSwitching || activeSpline != mainSplineContainer) return;
 

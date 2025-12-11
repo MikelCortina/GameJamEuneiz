@@ -1347,7 +1347,7 @@ PrefabInstance:
       objectReference: {fileID: 6529024086285912818}
     - target: {fileID: 3572486207968445106, guid: 93fbb0faeebcb1445a7799b2b4d702f8, type: 3}
       propertyPath: distanciaBase
-      value: 35
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3572486207968445106, guid: 93fbb0faeebcb1445a7799b2b4d702f8, type: 3}
       propertyPath: m_EditorClassIdentifier

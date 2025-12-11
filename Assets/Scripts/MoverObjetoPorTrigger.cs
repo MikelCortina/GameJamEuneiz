@@ -29,6 +29,7 @@ public class MoverObjetoPorDistancia : MonoBehaviour
     public AnimationClip clipPortal;
 
     public ParticleSystem estrellas;
+    private bool yaEvaluoProbabilidad = false;
 
     private void OnEnable()
     {
@@ -67,15 +68,24 @@ public class MoverObjetoPorDistancia : MonoBehaviour
         if (moverSoloUnaVez && yaMovio)
             return;
 
-        // Distancia se hace más pequeña con niveles altos
         float distanciaRequerida = distanciaBase / (1f + nivelActual);
         float distanciaActual = Vector3.Distance(objetoDetector.position, transform.position);
 
         if (distanciaActual <= distanciaRequerida)
         {
-            // 75% probabilidad → vibrar
-            if (Random.Range(0, 4) != 3)
-                SetVibra();
+            if (!yaEvaluoProbabilidad)
+            {
+                yaEvaluoProbabilidad = true;
+
+                // 75% de probabilidad
+                if (Random.Range(0, 4) != 3)
+                    SetVibra();
+            }
+        }
+        else
+        {
+            // Se resetea al salir del rango
+            yaEvaluoProbabilidad = false;
         }
     }
 
