@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
-    public int decision = 0; // 0 = medio, 1 = arriba, 2 = abajo
+    public int decision = 0; // 0 = medio, 1 = arriba, -1 = abajo
 
     // Sonidos originales
     public AudioClip palancaArribaSound;
@@ -59,19 +59,29 @@ public class GameManager : MonoBehaviour
         pausa?.Disable();
     }
 
+    void Start()
+    {
+        nuevaDecision = decision;
+        Debug.Log(decision);
+    }
+
     void Update()
     {
         nuevaDecision = decision;
 
-        if (pausa.triggered)
+        if (pausa.triggered && !pausado)
         {
             pausado = true;
-        }
-
-        // Solo cambia cuando se PRESIONA (triggered), no al mantener ni al soltar
-        if (Arriba.triggered && canChangeTrack&&!blocked && !pausado)
+        }else if(pausa.triggered && pausado)
         {
-            nuevaDecision = 1; // Siempre a arriba al pulsar arriba
+            pausado = false;
+        }
+        
+        // Solo cambia cuando se PRESIONA (triggered), no al mantener ni al soltar
+        if (Arriba.triggered && canChangeTrack&&!blocked && !pausado && nuevaDecision < 1)
+        {
+            nuevaDecision = decision + 1; // Siempre a arriba al pulsar arriba
+            Debug.Log(nuevaDecision);
             var gamepad = Gamepad.current;
             if (gamepad != null)
             {
@@ -80,9 +90,10 @@ public class GameManager : MonoBehaviour
                 Invoke("StopVibration", 0.1f); // Detener la vibración después de 0.2 segundos 
             }
         }
-        else if (Abajo.triggered && canChangeTrack && !blocked && !pausado)
+        else if (Abajo.triggered && canChangeTrack && !blocked && !pausado && nuevaDecision > -1)
         {
-            nuevaDecision = 2; // Siempre a abajo al pulsar abajo
+            nuevaDecision = decision - 1; // Siempre a abajo al pulsar abajo;
+            Debug.Log(nuevaDecision);
             var gamepad = Gamepad.current;
             if (gamepad != null)
             {
@@ -104,21 +115,17 @@ public class GameManager : MonoBehaviour
             // === ANIMACIÓN DE TRANSICIÓN ===
             if (decision == 0 && nuevaDecision == 1)
                 animator.Play("PalancaMedioArriba");
-            else if (decision == 0 && nuevaDecision == 2)
+            else if (decision == 0 && nuevaDecision == -1)
                 animator.Play("PalancaMedioAbajo");
-            else if (decision == 1 && nuevaDecision == 2)
-                animator.Play("PalancaArribaAbajo");
-            else if (decision == 2 && nuevaDecision == 1)
-                animator.Play("PalancaAbajoArriba");
             else if (decision == 1 && nuevaDecision == 0)
                 animator.Play("PalancaArribaMedio");
-            else if (decision == 2 && nuevaDecision == 0)
+            else if (decision == -1 && nuevaDecision == 0)
                 animator.Play("PalancaAbajoMedio");
 
             // === SONIDOS ===
             if (nuevaDecision == 1)
                 audioSource.PlayOneShot(palancaArribaSound);
-            else if (nuevaDecision == 2)
+            else if (nuevaDecision == -1)
                 audioSource.PlayOneShot(palancaAbajoSound);
             else if (nuevaDecision == 0)
                 audioSource.PlayOneShot(decision == 1 ? palancaArribaMedioSound : palancaAbajoMedioSound);

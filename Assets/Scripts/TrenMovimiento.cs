@@ -31,24 +31,24 @@ public class TrenMovimiento : MonoBehaviour
 
     void Start()
     {
-        targetPosition = transform.position; // iniciar posición objetivo
+        targetPosition = transform.position; // iniciar posiciï¿½n objetivo
     }
 
 
 
     void Update()
     {
-        // Movimiento horizontal constante (puedes seguir reduciéndolo si quieres)
+        // Movimiento horizontal constante (puedes seguir reduciï¿½ndolo si quieres)
         float horizontalSpeed = velocidad;
 
         float verticalDiff = Mathf.Abs(transform.position.y - targetPosition.y);
         if (verticalDiff > 0.01f)
-            horizontalSpeed *= 0.85f; // opcional: más lento mientras sube/baja
+            horizontalSpeed *= 0.85f; // opcional: mï¿½s lento mientras sube/baja
 
         transform.position += Vector3.right * horizontalSpeed * Time.deltaTime;
 
-        // <<< AQUÍ ESTÁ LA MAGIA >>>
-        // Suavizado natural con curva de aceleración/desaceleración
+        // <<< AQUï¿½ ESTï¿½ LA MAGIA >>>
+        // Suavizado natural con curva de aceleraciï¿½n/desaceleraciï¿½n
         float newY = Mathf.SmoothDamp(
             transform.position.y,
             targetPosition.y,
@@ -92,17 +92,17 @@ public class TrenMovimiento : MonoBehaviour
             StartCoroutine(BlockInputs());
             gameManager.canChangeTrack = true;
 
-            // Reseteamos la decisión correctamente
+            // Reseteamos la decisiï¿½n correctamente
             gameManager.nuevaDecision = 0;
             gameManager.decision = 0; // <- Esto es clave
 
-            // Animación y sonido según el estado previo
+            // Animaciï¿½n y sonido segï¿½n el estado previo
             if (gameManager.decisionParaCuestas == 1)
             {
                 gameManager.animator.Play("PalancaArribaMedio");
                 gameManager.audioSource.PlayOneShot(gameManager.palancaArribaMedioSound);
             }
-            else if (gameManager.decisionParaCuestas == 2)
+            else if (gameManager.decisionParaCuestas == -1)
             {
                 gameManager.animator.Play("PalancaAbajoMedio");
                 gameManager.audioSource.PlayOneShot(gameManager.palancaAbajoMedioSound);
@@ -121,7 +121,7 @@ public class TrenMovimiento : MonoBehaviour
                 IrPorArriba();
                 gameManager.canChangeTrack = false;
             }
-            else if (gameManager.decision == 2)
+            else if (gameManager.decision == -1)
             {
                 IrPorAbajo();
                 gameManager.canChangeTrack = false;
