@@ -16,7 +16,7 @@ public class SpawnProbabilistico : MonoBehaviour
         // Probabilidad de 1 entre 4
         int numero = Random.Range(0, 4);
 
-        if (numero <= 4)
+        if (numero <= 1)
         {
             if (objetos.Count == 0)
             {

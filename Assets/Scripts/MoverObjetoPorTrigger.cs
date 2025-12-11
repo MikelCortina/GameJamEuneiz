@@ -11,6 +11,7 @@ public class MoverObjetoPorDistancia : MonoBehaviour
 
     [Header("Distancia base")]
     public float distanciaBase = 5f;
+    public float distanciaMinima = 1f;
 
     [Header("Opciones adicionales")]
     public bool moverSoloUnaVez = true;
@@ -71,6 +72,9 @@ public class MoverObjetoPorDistancia : MonoBehaviour
 
         float distanciaRequerida = distanciaBase / (1f + nivelActual);
         float distanciaActual = Vector3.Distance(objetoDetector.position, transform.position);
+
+        // Asegura que nunca sea menor a la mínima
+        distanciaActual = Mathf.Max(distanciaActual, distanciaMinima);
 
         if (distanciaActual <= distanciaRequerida)
         {
@@ -166,4 +170,26 @@ public class MoverObjetoPorDistancia : MonoBehaviour
 
         yaMovio = true;
     }
+#if UNITY_EDITOR
+   /* private void OnDrawGizmosSelected()
+    {
+        if (objetoDetector == null)
+        {
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+                objetoDetector = playerObj.transform;
+        }
+
+        // Calcula la distancia requerida según el nivel
+        float distanciaRequerida = distanciaBase / (1f + nivelActual);
+
+        // Dibuja una esfera en la posición del objeto que indica el rango
+        Gizmos.color = new Color(0f, 1f, 0f, 0.25f); // verde translúcido
+        Gizmos.DrawSphere(transform.position, distanciaRequerida);
+
+        // También dibuja la distancia mínima para referencia
+        Gizmos.color = new Color(1f, 0f, 0f, 0.25f); // rojo translúcido
+        Gizmos.DrawSphere(transform.position, distanciaMinima);
+    }*/
+#endif
 }

@@ -7,11 +7,33 @@ public class Atropello : MonoBehaviour
 
     private Gamepad gamepad;
 
+    public Animator animator;
+    public ShakePanel shakePanel; // Referencia al script ShakePanel
+
+    void Start()
+    {
+        // Busca el objeto que tenga el componente ShakePanel
+        GameObject shakeObj = GameObject.Find("Rayo");
+        if (shakeObj != null)
+            shakePanel = shakeObj.GetComponent<ShakePanel>();
+
+        // Busca el objeto que tenga el componente Animator
+        GameObject animatorObj = GameObject.Find("Maquin2_0");
+        if (animatorObj != null)
+            animator = animatorObj.GetComponent<Animator>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")) // el tren
         {
-        Debug.Log("PEIO");
+            if (shakePanel != null)
+                shakePanel.Shake();
+
+            if (animator != null)
+                animator.Play("SustoClip");
+
+            Debug.Log("PEIO");
             if (entidadData != null)
             {
                 entidadData.Morir();

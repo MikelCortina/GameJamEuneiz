@@ -26,6 +26,8 @@ public class NivelManager1 : MonoBehaviour
 
     private void Awake()
     {
+        nivelActual = 0f;
+
         // Singleton seguro
         if (Instancia != null && Instancia != this)
         {
@@ -38,7 +40,7 @@ public class NivelManager1 : MonoBehaviour
     }
 
     // Métodos útiles
-    public void SubirNivel(float cantidad = 0.1f)
+    public void SubirNivel(float cantidad = 0.05f)
     {
         NivelActual += cantidad;
     }
