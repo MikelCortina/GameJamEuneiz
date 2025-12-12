@@ -12,8 +12,8 @@ public class ContadorOvejas : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale=1;
         ActualizarTexto();
-        Time.timeScale=Time.unscaledTime;
     }
 
     public void ActualizarTexto()

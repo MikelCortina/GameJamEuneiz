@@ -5,7 +5,7 @@ public class MenuInicial : MonoBehaviour
 {
     public void Jugar()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("Main 1");
     }
 
     public void Creditos()

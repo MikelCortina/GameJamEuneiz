@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-      
+      Time.timeScale = 1f;
         nuevaDecision = decision;
         Debug.Log(decision);
     }

@@ -28,6 +28,7 @@ public class ScreenEffects : MonoBehaviour
     }
     private void Start()
     {
+        Time.timeScale = 1f; 
         // Asegurarse de que el texto esté oculto al inicio
         if (deathScoreCanvasGroup != null)
         {
@@ -104,7 +105,7 @@ public class ScreenEffects : MonoBehaviour
 
         // Guardar la puntuación y volver al menú
         contadorOvejas.TerminarRun();
-
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MenuInicial");
         Time.timeScale = 1f;
     }
