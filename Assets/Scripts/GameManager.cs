@@ -31,9 +31,11 @@ public class GameManager : MonoBehaviour
     private Gamepad gamepad;
 
 
+
     private void OnEnable()
     {
         StopVibration();
+    
         if (inputActions == null)
         {
             Debug.LogWarning("InputActionAsset no asignado.");
@@ -61,12 +63,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+      
         nuevaDecision = decision;
         Debug.Log(decision);
     }
 
     void Update()
     {
+     
         if (canChangeTrack)
             nuevaDecision = decision;
 

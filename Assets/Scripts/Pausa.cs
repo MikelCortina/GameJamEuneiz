@@ -13,6 +13,7 @@ public class Pausa : MonoBehaviour
     private InputAction pausaAction;
 
     private Gamepad gamepad;
+    public ContadorOvejas contadorOvejas;
 
     private void OnEnable()
     {
@@ -61,6 +62,7 @@ public class Pausa : MonoBehaviour
         // Muestra el menú de pausa
         canvas.enabled = true;
         pausado = true;
+        contadorOvejas.MostrarPanelMejores();
     }
 
     public void Reanudar()

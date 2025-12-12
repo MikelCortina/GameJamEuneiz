@@ -8,10 +8,12 @@ public class ContadorOvejas : MonoBehaviour
     [SerializeField] private TMP_Text textoMejoresPuntuaciones; // TMP_Text dentro del panel
 
     public int valor = 0;
+  
 
     void Start()
     {
         ActualizarTexto();
+        Time.timeScale=Time.unscaledTime;
     }
 
     public void ActualizarTexto()
@@ -24,9 +26,9 @@ public class ContadorOvejas : MonoBehaviour
     public void TerminarRun()
     {
         GuardarPuntuacion();
-        MostrarPanelMejores();
         valor = 0;
         ActualizarTexto();
+
     }
 
     private void GuardarPuntuacion()
@@ -41,7 +43,7 @@ public class ContadorOvejas : MonoBehaviour
         }
     }
 
-    private void MostrarPanelMejores()
+    public void MostrarPanelMejores()
     {
         if (panelMejoresPuntuaciones != null)
             panelMejoresPuntuaciones.SetActive(true);

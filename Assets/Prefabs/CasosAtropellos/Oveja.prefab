@@ -138,9 +138,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 159222755942375603}
     m_Modifications:
+    - target: {fileID: 513357527295148672, guid: a2f9715b3fc7291448a38992d1520891, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1313827853700866770, guid: 3cc6efb77f5ff97458bda717afc4a258, type: 3}
     - target: {fileID: 882814136391798567, guid: a2f9715b3fc7291448a38992d1520891, type: 3}
       propertyPath: m_Name
       value: Oveja
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206807530669529928, guid: a2f9715b3fc7291448a38992d1520891, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206807530669529928, guid: a2f9715b3fc7291448a38992d1520891, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.59
       objectReference: {fileID: 0}
     - target: {fileID: 7246460547695563366, guid: a2f9715b3fc7291448a38992d1520891, type: 3}
       propertyPath: m_LocalPosition.x
@@ -148,7 +160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7246460547695563366, guid: a2f9715b3fc7291448a38992d1520891, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.056
       objectReference: {fileID: 0}
     - target: {fileID: 7246460547695563366, guid: a2f9715b3fc7291448a38992d1520891, type: 3}
       propertyPath: m_LocalPosition.z
@@ -237,12 +249,20 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  posicionesDestino2:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   distanciaBase: 5
+  distanciaMinima: 1
   moverSoloUnaVez: 1
   entidadData: {fileID: 8280818232903319353}
   animator: {fileID: 3804237560965642880}
   vibra: {fileID: 7400000, guid: 6a90262b02d506b4ea0b4afc104e3269, type: 2}
   idle: {fileID: 7400000, guid: eede51a2137647b43ad1a40c52bade5a, type: 2}
+  portal: {fileID: 0}
+  clipPortal: {fileID: 0}
+  estrellas: {fileID: 0}
 --- !u!4 &5995439756295645745 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7246460547695563366, guid: a2f9715b3fc7291448a38992d1520891, type: 3}

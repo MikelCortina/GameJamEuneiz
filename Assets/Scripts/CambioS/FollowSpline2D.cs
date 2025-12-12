@@ -31,6 +31,7 @@ public class FollowSpline2D : MonoBehaviour
         activeSpline = mainSplineContainer;
         activeSplineLength = mainSplineContainer.CalculateLength();
         fromSpline = toSpline = mainSplineContainer;
+        Time.timeScale = 1f;
     }
 
     private void Update()
@@ -106,7 +107,7 @@ public class FollowSpline2D : MonoBehaviour
     public void OnBranchTriggerEntered(BranchTrigger trigger)
     {
         NivelManager1.Instancia.SubirNivel();
-       Time.timeScale = Time.timeScale+0.1f;
+        speed = speed + 0.1f;
 
         if (isSwitching || activeSpline != mainSplineContainer) return;
 
