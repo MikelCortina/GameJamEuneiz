@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 
 public class MoverObjetoPorDistancia : MonoBehaviour
 {
@@ -32,6 +33,10 @@ public class MoverObjetoPorDistancia : MonoBehaviour
 
     public ParticleSystem estrellas;
     private bool yaEvaluoProbabilidad = false;
+    public bool haSumado;
+
+    public ContadorOvejas contadorOvejas;
+
 
     private void OnEnable()
     {
@@ -64,6 +69,7 @@ public class MoverObjetoPorDistancia : MonoBehaviour
 
     private void Update()
     {
+    
         if (objetoAMover == null || objetoDetector == null)
             return;
 
@@ -98,8 +104,7 @@ public class MoverObjetoPorDistancia : MonoBehaviour
     {
         estrellas.Play();
         portal.Play(clipPortal.name);
-
-        entidadData.Morir();
+    entidadData.Morir();
 
         if (posicionesDestino.Length != 3)
         {
@@ -126,6 +131,12 @@ public class MoverObjetoPorDistancia : MonoBehaviour
         objetoAMover.position = posicionesDestino[indiceElegido].position;
 
         yaMovio = true;
+
+        if (!haSumado)
+        {
+            contadorOvejas.valor++;
+        }
+        haSumado=true;
     }
 
     public void SetIdle()

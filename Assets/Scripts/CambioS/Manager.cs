@@ -12,7 +12,7 @@ public class Manager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+
         }
         else
         {
@@ -26,17 +26,17 @@ public class Manager : MonoBehaviour
         if (gameManager.nuevaDecision==1)
         {
             leverState = 2; // Arriba
-            Debug.Log("Palanca arriba (2)");
+
         }
         else if (gameManager.nuevaDecision == -1)
         {
             leverState = 1; // Abajo
-            Debug.Log("Palanca abajo (1)");
+      
         }
         else if (gameManager.nuevaDecision == 0)
         {
             leverState = 0; // Medio
-            Debug.Log("Palanca medio (0)");
+            
         }
     }
 

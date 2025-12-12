@@ -5,7 +5,7 @@ public class NivelManager1 : MonoBehaviour
 {
     public static NivelManager1 Instancia { get; private set; }
 
-    // Evento que envía el nuevo nivel cuando cambia
+    // Evento que envï¿½a el nuevo nivel cuando cambia
     public event Action<float> OnNivelCambiado;
 
     [SerializeField]
@@ -36,10 +36,10 @@ public class NivelManager1 : MonoBehaviour
         }
 
         Instancia = this;
-        DontDestroyOnLoad(gameObject);
+       
     }
 
-    // Métodos útiles
+    // Mï¿½todos ï¿½tiles
     public void SubirNivel(float cantidad = 0.05f)
     {
         NivelActual += cantidad;

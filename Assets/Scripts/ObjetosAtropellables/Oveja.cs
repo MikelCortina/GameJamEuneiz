@@ -6,7 +6,7 @@ public class Oveja : EntidadData
     public ContadorOvejas contadorOvejas;
     public override void Morir()
     {
-        contadorOvejas.valor++;
+        Debug.Log(  contadorOvejas.valor);
         contadorOvejas.ActualizarTexto();
         moverObjetoPorDistancia.Mover2();
         base.Morir(); 

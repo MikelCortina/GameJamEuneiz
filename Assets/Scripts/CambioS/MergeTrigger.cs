@@ -11,13 +11,16 @@ public class MergeTrigger : MonoBehaviour
 
         if (gameManager == null)
         {
-            Debug.LogError("No se encontró un GameManager en la escena.");
+            Debug.LogError("No se encontrï¿½ un GameManager en la escena.");
         }
+         gameManager.canChangeTrack = true;
+         gameManager.blocked = false;
+         gameManager.pausado=false;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         gameManager.canChangeTrack = true;
-        // Fuerza la palanca al medio (con animación y sonido)
+        // Fuerza la palanca al medio (con animaciï¿½n y sonido)
         gameManager.ForzarPalancaAlMedio();
         if (other.TryGetComponent<FollowSpline2D>(out var f))
             f.OnMergeTriggerEntered(this);

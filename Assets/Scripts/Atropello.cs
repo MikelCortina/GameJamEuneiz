@@ -10,6 +10,11 @@ public class Atropello : MonoBehaviour
     public Animator animator;
     public ShakePanel shakePanel; // Referencia al script ShakePanel
 
+    public ContadorOvejas contadorOvejas;
+
+public  bool haCambiado=false;
+    
+
     void Start()
     {
         // Busca el objeto que tenga el componente ShakePanel
@@ -37,6 +42,10 @@ public class Atropello : MonoBehaviour
             if (entidadData != null)
             {
                 entidadData.Morir();
+              if  (!haCambiado)
+              {
+                   // contadorOvejas.valor++;
+                }
                 var gamepad = Gamepad.current;
                 if (gamepad != null)
                 {

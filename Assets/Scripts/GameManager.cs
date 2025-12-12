@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
     private InputAction Arriba;
     private InputAction Abajo;
     private InputAction pausa;
-    private bool pausado = false;
+    public bool pausado = false;
 
     public bool blocked;
 
@@ -34,7 +35,12 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
+            // Reinicia el InputAsset para evitar acciones “fantasma”
+    inputActions.Disable();
+    inputActions.Enable();
         StopVibration();
+          canChangeTrack=true;
+        blocked=false;
     
         if (inputActions == null)
         {
@@ -63,14 +69,18 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+       
       Time.timeScale = 1f;
         nuevaDecision = decision;
         Debug.Log(decision);
+       
     }
 
     void Update()
     {
-     
+     Debug.Log(canChangeTrack);
+     Debug.Log(blocked);
+     Debug.Log(pausa);
         if (canChangeTrack)
             nuevaDecision = decision;
 
@@ -83,7 +93,7 @@ public class GameManager : MonoBehaviour
         }
         
         // Solo cambia cuando se PRESIONA (triggered), no al mantener ni al soltar
-        if (Arriba.triggered && canChangeTrack&&!blocked && !pausado && nuevaDecision < 1)
+        if (Arriba.triggered && canChangeTrack &&!blocked&& !pausado && nuevaDecision < 1)
         {
             nuevaDecision = decision + 1; // Siempre a arriba al pulsar arriba
             Debug.Log(nuevaDecision);
@@ -95,7 +105,7 @@ public class GameManager : MonoBehaviour
                 Invoke("StopVibration", 0.1f); // Detener la vibración después de 0.2 segundos 
             }
         }
-        else if (Abajo.triggered && canChangeTrack && !blocked && !pausado && nuevaDecision > -1)
+        else if (Abajo.triggered && canChangeTrack &&!blocked&& !pausado && nuevaDecision > -1)
         {
             nuevaDecision = decision - 1; // Siempre a abajo al pulsar abajo;
             Debug.Log(nuevaDecision);
@@ -107,7 +117,7 @@ public class GameManager : MonoBehaviour
                 Invoke("StopVibration", 0.1f); // Detener la vibración después de 0.2 segundos 
             }
         }
-        
+
 
         // OPCIONAL: si quieres un botón para volver al centro (por ejemplo, ejemplo, el mismo botón de abajo dos veces o otro botón)
         // Descomenta esto si lo necesitas más adelante
